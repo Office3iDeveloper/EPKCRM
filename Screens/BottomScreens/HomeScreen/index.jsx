@@ -21,7 +21,7 @@ import LottieView from 'lottie-react-native';
 import LottieAlertSucess from "../../../Assets/Alerts/Success";
 import LottieAlertError from "../../../Assets/Alerts/Error";
 import LottieCatchError from "../../../Assets/Alerts/Catch";
-import { check, request, PERMISSIONS } from 'react-native-permissions';
+import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HomeScreen = ({ navigation }) => {
@@ -58,7 +58,6 @@ const HomeScreen = ({ navigation }) => {
     const [currentDate, setCurrentDate] = useState('');
     const [currentDay, setCurrentDay] = useState('');
     const [load, SetLoad] = useState(false);
-    console.log(userAlreadyLoggedIn, "userAlreadyLoggedIn")
 
     // current date & current day
 
@@ -276,17 +275,43 @@ const HomeScreen = ({ navigation }) => {
     };
 
     const checkAndRequestCameraPermission = async () => {
-        const status = await check(PERMISSIONS.ANDROID.CAMERA);
-
-        if (status !== 'granted') {
-            const result = await request(PERMISSIONS.ANDROID.CAMERA);
-            if (result !== 'granted') {
-                console.log('Camera permission is not granted');
+        const cameraPermission =
+            Platform.OS === 'android' ? PERMISSIONS.ANDROID.CAMERA : PERMISSIONS.IOS.CAMERA;
+    
+        const status = await check(cameraPermission);
+        console.log('Camera permission status:', status); // Log the current status for debugging
+    
+        switch (status) {
+            case RESULTS.UNAVAILABLE:
+                console.log('Camera is not available on this device');
+                Alert.alert('Camera Unavailable', 'Your device does not support camera access.');
                 return;
-            }
+            case RESULTS.DENIED:
+                // Request permission if it was previously denied
+                const result = await request(cameraPermission);
+                if (result !== RESULTS.GRANTED) {
+                    console.log('Camera permission request denied');
+                    Alert.alert('Permission Denied', 'Camera access is required to proceed.');
+                    return;
+                }
+                break;
+            case RESULTS.BLOCKED:
+                console.log('Camera permission is blocked');
+                Alert.alert(
+                    'Camera Permission Blocked',
+                    'Camera access is blocked. Please enable it in the app settings.',
+                    [
+                        { text: 'Open Settings', onPress: () => Linking.openSettings() },
+                        { text: 'Cancel', style: 'cancel' },
+                    ]
+                );
+                return;
+            case RESULTS.GRANTED:
+                // Permission is granted
+                break;
         }
-
-        handleFromCamera();
+    
+        handleFromCamera(); // Proceed if permission is granted
     };
 
     const handleImagePickerResult = async (result) => {
@@ -754,7 +779,7 @@ const HomeScreen = ({ navigation }) => {
 
     return (
 
-        <ScrollView>
+        <ScrollView refreshControl={<RefreshControl refreshing={refreshing} />}>
 
             <View>
 

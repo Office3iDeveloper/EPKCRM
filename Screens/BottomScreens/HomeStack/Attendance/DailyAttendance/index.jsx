@@ -13,7 +13,7 @@ import Share from 'react-native-share';
 import RNHTMLtoPDF from 'react-native-html-to-pdf';
 import EditIcon from "../../../../../Assets/Icons/Edit.svg";
 
-const AttendanceRequest = () => {
+const AttendanceRequest = ({ navigation }) => {
 
     // data from redux store 
 
@@ -334,6 +334,7 @@ const AttendanceRequest = () => {
                                             </View>
                                             {(data.userrole == 1 && item.checkin_date != null) ? <View style={styles.listcontentButtonview}>
                                                 <TouchableOpacity style={styles.listcontenteditbutton}
+                                                    onPress={() => navigation.navigate('Edit Daily Attendance', { Id: item })}
                                                 >
                                                     <EditIcon width={14} height={14} color={"#000"} />
                                                 </TouchableOpacity>

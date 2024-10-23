@@ -194,6 +194,7 @@ import EditDepList from "./OrganizationStructure/EditDepartmentList";
 import HeaderandFooter from "./Template/HeaderandFooter";
 import EditHeadFoot from "./Template/EditHeadFoot";
 import ViewHeaderFooter from "./Template/ViewHeadFoot";
+import EditDailyAttendance from "./Attendance/EditDailyAttendance";
 
 
 const Stack = createNativeStackNavigator();
@@ -289,6 +290,7 @@ const HomeStack = () => {
       {/*  */}
 
       <Stack.Screen name="Daily Attendance" component={DailyAttendance} />
+      <Stack.Screen name="Edit Daily Attendance" component={EditDailyAttendance} />
       <Stack.Screen name="Monthly Attendance" component={MonthlyAttendance} />
       <Stack.Screen name="Monthly List" component={MonthlyList} />
       <Stack.Screen name="Indvidual" component={Indvidual} />

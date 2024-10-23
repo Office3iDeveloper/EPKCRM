@@ -99,13 +99,13 @@ const BasicDetails = ({ onEmpDetails, selectedImage, setSelectedImage, selectedI
             for (const image of images) {
                 const response = await fetch(image.uri);
                 const blob = await response.blob();
-                if (blob.size > 1024 * 1024) {
+                if (blob.size > 5 * 1024 * 1024) {
                     Alert.alert("File size should be less than 1MB");
                 } else {
                     const compressedUri = await compressImage(image);
                     console.log(compressedUri, "compressedUri")
                     setSelectedImage(prevImages => [...prevImages, compressedUri.path]);
-                    selectedImageErr(null)
+                    // selectedImageErr(null)
                 }
             }
         }

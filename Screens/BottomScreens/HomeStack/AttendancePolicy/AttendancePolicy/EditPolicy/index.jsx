@@ -571,14 +571,6 @@ const EditPolicy = ({ route, navigation }) => {
                                 <Text onPress={showSlotFromTimepicker}>
                                     {slotfromTime} &nbsp;
                                 </Text>
-                                {/* {showSlotFromTimePicker && (
-                                    <DateTimePicker
-                                        value={parse(slotfromTime, 'HH:mm:ss', new Date())}
-                                        mode="time"
-                                        display="default"
-                                        onChange={handleSlotFromTimeChange}
-                                    />
-                                )} */}
                                 {Platform.OS === 'android' && showSlotFromTimePicker && (
                                     <DateTimePicker
                                         // value={parse(slotfromTime, 'HH:mm:ss', new Date())}
@@ -620,14 +612,6 @@ const EditPolicy = ({ route, navigation }) => {
                                 <Text onPress={showSlotToTimepicker}>
                                     {slotToTime} &nbsp;
                                 </Text>
-                                {/* {showSlotToTimePicker && (
-                                    <DateTimePicker
-                                        value={parse(slotToTime, 'HH:mm:ss', new Date())}
-                                        mode="time"
-                                        display="default"
-                                        onChange={handleSlotToTimeChange}
-                                    />
-                                )} */}
                                 {Platform.OS === 'android' && showSlotToTimePicker && (
                                     <DateTimePicker
                                         // value={parse(slotToTime, 'HH:mm:ss', new Date())}
