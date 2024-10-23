@@ -22,6 +22,7 @@ import LottieAlertSucess from "../../../Assets/Alerts/Success";
 import LottieAlertError from "../../../Assets/Alerts/Error";
 import LottieCatchError from "../../../Assets/Alerts/Catch";
 import { check, request, PERMISSIONS } from 'react-native-permissions';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const HomeScreen = ({ navigation }) => {
 
@@ -57,6 +58,7 @@ const HomeScreen = ({ navigation }) => {
     const [currentDate, setCurrentDate] = useState('');
     const [currentDay, setCurrentDay] = useState('');
     const [load, SetLoad] = useState(false);
+    console.log(userAlreadyLoggedIn, "userAlreadyLoggedIn")
 
     // current date & current day
 
@@ -485,7 +487,7 @@ const HomeScreen = ({ navigation }) => {
             const responsedata = await response.json();
 
             if (responsedata.status === "success") {
-                getInOutWorkingTime();
+                getInOutWorkingTime(true);
                 Alert.alert('Successfull', responsedata.message)
             } else {
                 Alert.alert('Failed', responsedata.message)
@@ -518,7 +520,7 @@ const HomeScreen = ({ navigation }) => {
             console.log(responsedata, "performancecheckout")
 
             if (responsedata.status === "success") {
-                getInOutWorkingTime();
+                getInOutWorkingTime(true);
                 Alert.alert('Successfull', responsedata.message)
             } else {
                 Alert.alert('Failed', responsedata.message)
@@ -532,7 +534,7 @@ const HomeScreen = ({ navigation }) => {
 
     // 
 
-    const getInOutWorkingTime = async () => {
+    const getInOutWorkingTime = async (flag) => {
 
         try {
 
@@ -553,35 +555,13 @@ const HomeScreen = ({ navigation }) => {
                 setLoggedInTime(updatedata.userempcheckintime);
                 setLoggedOutTime(updatedata.userempcheckouttime);
                 setTotalHours(updatedata.userempchecktotaltime);
-                setUserAlreadyLoggedIn(updatedata.statuscurrentdate);
-            }
-
-        } catch (error) {
-            Alert.alert('Error during login:', error);
-        }
-    };
-
-    const getInOutWorkingTime1 = async () => {
-
-        try {
-
-            const apiUrl = 'https://office3i.com/development/api/public/api/employeeIndexinouttime';
-
-            const response = await axios.post(apiUrl, {
-                emp_id: data.userempid
-            }, {
-                headers: {
-                    Authorization: `Bearer ${data.token}`
+                await AsyncStorage.setItem('loggedInTime', updatedata.userempcheckintime);
+                await AsyncStorage.setItem('loggedOutTime', updatedata.userempcheckouttime);
+                await AsyncStorage.setItem('totalHours', updatedata.userempchecktotaltime);
+                if (flag === true) {
+                    setUserAlreadyLoggedIn(updatedata.statuscurrentdate);
+                    await AsyncStorage.setItem('userAlreadyLoggedIn', updatedata.statuscurrentdate.toString());
                 }
-            });
-
-            console.log(response.data, "response")
-
-            if (response && response.data) {
-                const updatedata = response.data;
-                setLoggedInTime(updatedata.userempcheckintime);
-                setLoggedOutTime(updatedata.userempcheckouttime);
-                setTotalHours(updatedata.userempchecktotaltime);
             }
 
         } catch (error) {
@@ -590,7 +570,35 @@ const HomeScreen = ({ navigation }) => {
     };
 
     useEffect(() => {
-        getInOutWorkingTime1();
+        const fetchStoredData = async () => {
+            try {
+                const storedLoggedInTime = await AsyncStorage.getItem('loggedInTime');
+                const storedLoggedOutTime = await AsyncStorage.getItem('loggedOutTime');
+                const storedTotalHours = await AsyncStorage.getItem('totalHours');
+                const storedUserAlreadyLoggedIn = await AsyncStorage.getItem('userAlreadyLoggedIn');
+
+                if (storedLoggedInTime !== null) {
+                    setLoggedInTime(storedLoggedInTime);
+                }
+                if (storedLoggedOutTime !== null) {
+                    setLoggedOutTime(storedLoggedOutTime);
+                }
+                if (storedTotalHours !== null) {
+                    setTotalHours(storedTotalHours);
+                }
+                if (storedUserAlreadyLoggedIn !== null) {
+                    setUserAlreadyLoggedIn(storedUserAlreadyLoggedIn);
+                }
+            } catch (error) {
+                console.error('Error fetching stored data:', error);
+            }
+        };
+
+        fetchStoredData();
+    }, []);
+
+    useEffect(() => {
+        getInOutWorkingTime(false);
     }, [])
 
     // 
