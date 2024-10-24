@@ -82,7 +82,7 @@ const JobOpenings = ({ navigation }) => {
             }
 
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_jobopening';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_jobopening';
 
             const response = await axios.post(apiUrl, {
                 designation: designation,
@@ -125,7 +125,7 @@ const JobOpenings = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true);
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/jobopening_list`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/jobopening_list`;
 
             const response = await axios.get(apiUrl, {
                 headers: {

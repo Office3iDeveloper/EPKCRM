@@ -40,7 +40,7 @@ const VisitorLog = ({ navigation }) => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`https://office3i.com/development/api/public/api/visitor_list`, {
+            const response = await axios.get(`https://epkgroup.in/crm/api/public/api/visitor_list`, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
                 }
@@ -83,7 +83,7 @@ const VisitorLog = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/visitor_checkout';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/visitor_checkout';
 
             const response = await axios.put(apiUrl, {
                 id: employee.id,
@@ -192,7 +192,7 @@ const VisitorLog = ({ navigation }) => {
                                                 <View>
                                                     {employee.profile_img ? (
                                                         <Image
-                                                            source={{ uri: `https://office3i.com/development/api/storage/app/${employee.profile_img}` }}
+                                                            source={{ uri: `https://epkgroup.in/crm/api/storage/app/${employee.profile_img}` }}
                                                             style={styles.imageStyle}
 
                                                         />

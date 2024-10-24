@@ -149,7 +149,7 @@ const BasicDetails = ({ onEmpDetails, selectedImage, setSelectedImage, selectedI
         const fetchData = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/employee_uid';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/employee_uid';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`

@@ -90,7 +90,7 @@ const AttendanceLocation = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/attendancelocationinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendancelocationinsert';
 
             const response = await axios.post(apiUrl, {
                 request_location: shiftSlot,
@@ -137,7 +137,7 @@ const AttendanceLocation = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_attendancelocation';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_attendancelocation';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -186,7 +186,7 @@ const AttendanceLocation = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_attendancelocation`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_attendancelocation`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -259,7 +259,7 @@ const AttendanceLocation = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_attendancelocation';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_attendancelocation';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

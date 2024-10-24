@@ -304,7 +304,7 @@ const CustomDrawerContent = ({ navigation }) => {
 
     // const signout = async () => {
     //     try {
-    //         const apiUrl = 'https://office3i.com/development/api/public/api/logout';
+    //         const apiUrl = 'https://epkgroup.in/crm/api/public/api/logout';
 
     //         const response = await axios.post(apiUrl, {}, { 
     //             headers: {
@@ -330,12 +330,12 @@ const CustomDrawerContent = ({ navigation }) => {
 
     // Image URL  
 
-    const imageUrl = `https://office3i.com/development/api/storage/app/${data.userimage}`;
+    const imageUrl = `https://epkgroup.in/crm/api/storage/app/${data.userimage}`;
 
     // 
 
     useEffect(() => {
-        axios.get(`https://office3i.com/development/api/public/api/editview_role/${data.userrole}`, {
+        axios.get(`https://epkgroup.in/crm/api/public/api/editview_role/${data.userrole}`, {
             headers: {
                 'Authorization': `Bearer ${data.token}`
             }
@@ -819,7 +819,7 @@ const CustomDrawerContent = ({ navigation }) => {
                                 </View>
 
                                 : <LinearGradient
-                                    colors={['#1FDAFD', '#0670F5']}
+                                    colors={['#ed1c26', '#e5707bd1']}
                                     style={styles.profileview}
 
                                 >
@@ -1014,11 +1014,11 @@ const CustomDrawerContent = ({ navigation }) => {
 
                                             {dropdowns.Template && (
                                                 <>
-                                                 <DrawerItem
+                                                    <DrawerItem
                                                         label="Header and Footer"
                                                         onPress={() => navigation.navigate('Header and Footer')}
                                                     />
-                                                    
+
                                                     {templatePermissions.OfferLetter.some(permission => checkedNames.EmployeeManagement.Template.OfferLetter.includes(permission)) && (
                                                         <TouchableOpacity
                                                             style={styles.dropdown}
@@ -1195,7 +1195,10 @@ const CustomDrawerContent = ({ navigation }) => {
                             <>
                                 <TouchableOpacity
                                     style={styles.dropdown}
-                                    onPress={() => toggleDropdown('AttendanceCalculations')}
+                                    onPress={() => {
+                                        toggleDropdown('AttendanceCalculations');
+                                        navigation.navigate('Power Bi Attendance');
+                                    }}
                                 >
                                     <View style={styles.Tab}>
                                         <LeavePolicyIcon width={22} height={22} color={'#000'} />
@@ -2125,7 +2128,7 @@ const CustomDrawerContent = ({ navigation }) => {
 
                         {/* Sales Management */}
 
-                        <>
+                        {/* <>
                             <TouchableOpacity
                                 style={styles.dropdown}
                                 onPress={() => toggleDropdown('SalesManagement')}
@@ -2289,7 +2292,7 @@ const CustomDrawerContent = ({ navigation }) => {
 
                                 </>
                             )}
-                        </>
+                        </> */}
 
                         {/* Invoice List */}
 

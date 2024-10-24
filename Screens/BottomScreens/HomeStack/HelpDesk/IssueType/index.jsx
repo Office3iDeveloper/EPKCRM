@@ -95,7 +95,7 @@ const IssueType = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_issue_type';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_issue_type';
 
             const response = await axios.post(apiUrl, {
                 created_by: data.userempid,
@@ -142,7 +142,7 @@ const IssueType = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_issuetype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_issuetype';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -192,7 +192,7 @@ const IssueType = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_issuetype`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_issuetype`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -267,7 +267,7 @@ const IssueType = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_issuetype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_issuetype';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

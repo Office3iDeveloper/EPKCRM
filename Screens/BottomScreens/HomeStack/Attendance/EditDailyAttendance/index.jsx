@@ -18,8 +18,6 @@ const EditDailyAttendance = ({ route, navigation }) => {
     const SpecId = route.params.Id.attendance_id;
     const Id = route.params.Id.id;
 
-    console.log(Id, "Id")
-
 
     // data from redux store 
 
@@ -66,7 +64,7 @@ const EditDailyAttendance = ({ route, navigation }) => {
 
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_category_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_category_list';
 
         const fetchData = async () => {
 
@@ -157,7 +155,7 @@ const EditDailyAttendance = ({ route, navigation }) => {
     const CApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/attendance_edit_listview/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/attendance_edit_listview/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -254,7 +252,7 @@ const EditDailyAttendance = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/dailyattendance_update';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/dailyattendance_update';
 
             const response = await axios.put(apiUrl, {
                 id: Id,
@@ -269,7 +267,7 @@ const EditDailyAttendance = ({ route, navigation }) => {
                 },
             });
 
-            console.log(response,"response")
+            console.log(response, "response")
 
             if (response.data.status === "success") {
                 setload(false);

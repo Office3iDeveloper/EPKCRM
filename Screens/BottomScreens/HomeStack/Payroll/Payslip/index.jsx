@@ -58,7 +58,7 @@ const PaySlip = ({ route, navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/get_emp_payslip_list/${SpecId.e_id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/get_emp_payslip_list/${SpecId.e_id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -242,7 +242,7 @@ const PaySlip = ({ route, navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_payslip_list`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_payslip_list`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,

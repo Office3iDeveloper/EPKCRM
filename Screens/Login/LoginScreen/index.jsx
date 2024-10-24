@@ -56,7 +56,7 @@ const LoginScreen = ({ navigation }) => {
                 setPasswordError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/login';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/login';
 
             const response = await axios.post(apiUrl, {
                 user_login: employeeId,

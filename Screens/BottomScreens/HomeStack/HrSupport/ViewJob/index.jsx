@@ -65,7 +65,7 @@ const ViewJob = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_job_opening';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_job_opening';
 
             const response = await axios.put(apiUrl, {
                 id: Item.id,
@@ -143,7 +143,7 @@ const ViewJob = ({ navigation, route }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_job_opening`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_job_opening`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,

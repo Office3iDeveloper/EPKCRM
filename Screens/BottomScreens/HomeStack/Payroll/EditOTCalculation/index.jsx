@@ -59,7 +59,7 @@ const EditOtCalculation = ({ route, navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -107,7 +107,7 @@ const EditOtCalculation = ({ route, navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -188,7 +188,7 @@ const EditOtCalculation = ({ route, navigation }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -222,7 +222,7 @@ const EditOtCalculation = ({ route, navigation }) => {
     const [selectedTypeId, setSelectedTypeId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/attendance_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendance_type_list';
 
         const fetchData = async () => {
 
@@ -262,7 +262,7 @@ const EditOtCalculation = ({ route, navigation }) => {
     const [selectedLocationId, setSelectedLocationId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/attendance_location_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendance_location_list';
 
         const fetchData = async () => {
 
@@ -302,7 +302,7 @@ const EditOtCalculation = ({ route, navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/view_overtime/${SpecId.id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/view_overtime/${SpecId.id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -358,7 +358,7 @@ const EditOtCalculation = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_overtime';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_overtime';
 
             const response = await axios.post(apiUrl, {
                 id: SpecId.id,

@@ -6,7 +6,7 @@ export const White = "#ffffff";
 
 // Login
 
-export const SubContainer = 'rgba(144, 220, 255, 0.6)';
+export const SubContainer = 'rgba(194, 220, 255, 0.6)';
 export const FieldContainer ='#C8ECFF';
 
 // Cards

@@ -74,7 +74,7 @@ const EditRaiseAssign = ({ route, navigation }) => {
     const [selectedDepartmentsId1, setSelectedDepartmentsId1] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -125,7 +125,7 @@ const EditRaiseAssign = ({ route, navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -146,7 +146,7 @@ const EditRaiseAssign = ({ route, navigation }) => {
 
     const fetchEmployeeDropdown1 = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -189,7 +189,7 @@ const EditRaiseAssign = ({ route, navigation }) => {
         const issType = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/issue_type_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/issue_type_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -222,7 +222,7 @@ const EditRaiseAssign = ({ route, navigation }) => {
         const EditRaisetick = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/editview_raiselist/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_raiselist/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -281,7 +281,7 @@ const EditRaiseAssign = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_raiseticket';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_raiseticket';
 
             const response = await axios.put(apiUrl, {
                 id: SpecId.id,

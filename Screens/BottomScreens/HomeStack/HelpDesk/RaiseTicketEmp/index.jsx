@@ -74,7 +74,7 @@ const RaiseTicketEmp = ({ navigation }) => {
     const [selectedDepartmentsId1, setSelectedDepartmentsId1] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -125,7 +125,7 @@ const RaiseTicketEmp = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -146,7 +146,7 @@ const RaiseTicketEmp = ({ navigation }) => {
 
     const fetchEmployeeDropdown1 = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -186,7 +186,7 @@ const RaiseTicketEmp = ({ navigation }) => {
         const TickId = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/ticket_id';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/ticket_id';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -216,7 +216,7 @@ const RaiseTicketEmp = ({ navigation }) => {
         const issType = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/issue_type_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/issue_type_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -308,7 +308,7 @@ const RaiseTicketEmp = ({ navigation }) => {
                 }
             }
 
-            const response = await fetch('https://office3i.com/development/api/public/api/addemployee_raise_ticket', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/addemployee_raise_ticket', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

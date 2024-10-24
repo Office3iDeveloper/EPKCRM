@@ -56,7 +56,7 @@ const PreBuyPacklist = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/getbuynow_packlist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/getbuynow_packlist';
             const response = await axios.post(apiUrl, {
                 e_id: data.userempid,
                 role_id: data.userrole

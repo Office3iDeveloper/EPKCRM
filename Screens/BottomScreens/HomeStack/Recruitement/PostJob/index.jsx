@@ -151,7 +151,7 @@ const PostJob = ({ navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -194,7 +194,7 @@ const PostJob = ({ navigation }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -249,7 +249,7 @@ const PostJob = ({ navigation }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -458,7 +458,7 @@ const PostJob = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_job_post';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_job_post';
 
             const response = await axios.post(apiUrl, {
                 designation: desgination,

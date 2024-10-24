@@ -66,7 +66,7 @@ const AddCompany = ({ navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -110,7 +110,7 @@ const AddCompany = ({ navigation }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -154,7 +154,7 @@ const AddCompany = ({ navigation }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -327,7 +327,7 @@ const AddCompany = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/addcompany_information';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/addcompany_information';
 
             const response = await axios.post(apiUrl, {
                 created_by: data.userempid,

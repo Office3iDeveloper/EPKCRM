@@ -50,7 +50,7 @@ const ResetPassword = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/forgot_change_password';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/forgot_change_password';
 
             const response = await axios.post(apiUrl, {
                 email: email,

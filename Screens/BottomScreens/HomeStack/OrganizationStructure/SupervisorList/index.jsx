@@ -49,7 +49,7 @@ const SupervisorList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_supervisor';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_supervisor';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -93,7 +93,7 @@ const SupervisorList = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -120,7 +120,7 @@ const SupervisorList = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/department_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/department_list';
 
         const fetchData = async () => {
 
@@ -200,7 +200,7 @@ const SupervisorList = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/addsupervisor';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/addsupervisor';
 
             const response = await axios.post(apiUrl, {
                 depart_id :selectedDepartmentId1,
@@ -286,7 +286,7 @@ const SupervisorList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_supervisor`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_supervisor`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,

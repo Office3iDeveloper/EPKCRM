@@ -36,7 +36,7 @@ const EditTask = ({ route, navigation }) => {
 
     const fetchProList = async () => {
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/project_name_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/project_name_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data?.token}`
@@ -111,7 +111,7 @@ const EditTask = ({ route, navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -140,7 +140,7 @@ const EditTask = ({ route, navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -272,7 +272,7 @@ const EditTask = ({ route, navigation }) => {
             setDataload(true);
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/edit_tasklist/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/edit_tasklist/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -457,7 +457,7 @@ const EditTask = ({ route, navigation }) => {
                 formData.append('attachment', datalist.attachment);
             }
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_task_list', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_task_list', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

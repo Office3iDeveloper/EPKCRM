@@ -56,7 +56,7 @@ const PayslipList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/view_activeinactiveList/${selectedStatus}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/view_activeinactiveList/${selectedStatus}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

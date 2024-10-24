@@ -66,7 +66,7 @@ const Template = ({ navigation }) => {
         setLoadData(true);
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/hr_templatelist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/hr_templatelist';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 emp_id: data.userempid
@@ -107,7 +107,7 @@ const Template = ({ navigation }) => {
                 setReason('');
             }
 
-            const apiUrl = `https://office3i.com/development/api/public/api/hr_template_delete`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/hr_template_delete`;
 
             const response = await axios.post(apiUrl, {
                 id: slotToDelete,
@@ -234,7 +234,7 @@ const Template = ({ navigation }) => {
             }
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/hr_addtemplates', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/hr_addtemplates', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -363,7 +363,7 @@ const Template = ({ navigation }) => {
 
             formData.append('old_templatepath', EditedocFile);
 
-            const response = await fetch('https://office3i.com/development/api/public/api/hr_template_update', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/hr_template_update', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -423,7 +423,7 @@ const Template = ({ navigation }) => {
     const downloadFile = async (URLlink) => {
 
         try {
-            const baseUrl = `https://office3i.com/development/api/storage/app/`;
+            const baseUrl = `https://epkgroup.in/crm/api/storage/app/`;
             const url = baseUrl + URLlink;
             const fileName = URLlink.split('/').pop();
 
@@ -510,7 +510,7 @@ const Template = ({ navigation }) => {
     };
 
     const handlePreview = (UrlLink) => {
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
         if (filePath && filePath !== "-") {

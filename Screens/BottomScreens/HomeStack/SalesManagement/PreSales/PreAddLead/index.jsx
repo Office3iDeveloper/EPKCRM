@@ -79,7 +79,7 @@ const PreAddLead = ({ navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -125,7 +125,7 @@ const PreAddLead = ({ navigation }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -169,7 +169,7 @@ const PreAddLead = ({ navigation }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -212,7 +212,7 @@ const PreAddLead = ({ navigation }) => {
 
     const fetchData = async () => {
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/getautogenerateLeadId';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/getautogenerateLeadId';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -417,7 +417,7 @@ const PreAddLead = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_addlead';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_addlead';
 
             const response = await axios.post(apiUrl, {
                 created_by: data.userempid,

@@ -113,7 +113,7 @@ const EditGeneral = ({
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/ug_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/ug_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -149,7 +149,7 @@ const EditGeneral = ({
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/pg_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/pg_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -210,7 +210,7 @@ const EditGeneral = ({
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -258,7 +258,7 @@ const EditGeneral = ({
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${val.current_country}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${val.current_country}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -304,7 +304,7 @@ const EditGeneral = ({
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${val.current_state}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${val.current_state}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -360,7 +360,7 @@ const EditGeneral = ({
     const PrefCityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/all_city_list`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/all_city_list`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

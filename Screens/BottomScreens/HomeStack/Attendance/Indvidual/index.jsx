@@ -70,7 +70,7 @@ const Indvidual = ({ route }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/get_IndividualMonthlyList';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/get_IndividualMonthlyList';
             const response = await axios.post(apiUrl, {
                 empid: Id,
                 yearmonth: formattedStartDate

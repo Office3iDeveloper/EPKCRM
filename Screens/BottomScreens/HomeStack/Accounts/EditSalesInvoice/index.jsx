@@ -26,7 +26,7 @@ const EditSalesInvoice = ({ route, navigation }) => {
     const getApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/editview_saleinvoice/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_saleinvoice/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -168,7 +168,7 @@ const EditSalesInvoice = ({ route, navigation }) => {
     const DescriptionalApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_item_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_item_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -191,7 +191,7 @@ const EditSalesInvoice = ({ route, navigation }) => {
 
     const HsnApi = async (index, descriptionalGoodsId) => {
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/sales_hsn_sac/${descriptionalGoodsId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/sales_hsn_sac/${descriptionalGoodsId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -257,7 +257,7 @@ const EditSalesInvoice = ({ route, navigation }) => {
     // const InvoiceNumberApi = async () => {
 
     //     try {
-    //         const apiUrl = 'https://office3i.com/development/api/public/api/autogeneratesaleinvoiceid';
+    //         const apiUrl = 'https://epkgroup.in/crm/api/public/api/autogeneratesaleinvoiceid';
     //         const response = await axios.get(apiUrl, {
     //             headers: {
     //                 Authorization: `Bearer ${data.token}`
@@ -369,7 +369,7 @@ const EditSalesInvoice = ({ route, navigation }) => {
     const CompanyApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_company_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_company_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -524,7 +524,7 @@ const EditSalesInvoice = ({ route, navigation }) => {
             formData.append('updated_by', data.userrole);
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_saleinvoice', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_saleinvoice', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

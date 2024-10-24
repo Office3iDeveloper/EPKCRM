@@ -55,7 +55,7 @@ const TLOtRequest = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/tl_otrequest_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/tl_otrequest_list';
             const response = await axios.post(apiUrl, {
                 supervisor_empid: data.userempid,
                 role_id: data.userrole,
@@ -196,7 +196,7 @@ const TLOtRequest = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/tl_approval_ot_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/tl_approval_ot_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,
@@ -230,7 +230,7 @@ const TLOtRequest = () => {
     const HandleCancel = async (item) => {
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/tl_approval_ot_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/tl_approval_ot_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,

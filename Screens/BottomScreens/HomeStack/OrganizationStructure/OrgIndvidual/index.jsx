@@ -14,7 +14,7 @@ const OrgIndvidual = ({ route, navigation }) => {
 
     const CountApi = async () => {
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/orgchart_employee_data/${SpecId.id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/orgchart_employee_data/${SpecId.id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -46,7 +46,7 @@ const OrgIndvidual = ({ route, navigation }) => {
                         <View style={styles.ImgCard}>
 
                             {totalcount.profile_img ? (
-                                <Image source={{ uri: `https://office3i.com/development/api/storage/app/${totalcount.profile_img}` }} style={styles.Img} />
+                                <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${totalcount.profile_img}` }} style={styles.Img} />
                             ) : (
                                 <EmployeeIcon width={22} height={22} color={'#000'} />
                             )}

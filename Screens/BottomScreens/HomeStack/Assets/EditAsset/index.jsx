@@ -54,7 +54,7 @@ const EditAsset = ({ route, navigation }) => {
 
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -94,7 +94,7 @@ const EditAsset = ({ route, navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -192,7 +192,7 @@ const EditAsset = ({ route, navigation }) => {
         const Asstype = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/asset_name';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/asset_name';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -218,7 +218,7 @@ const EditAsset = ({ route, navigation }) => {
         const EditassType = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/edit_assign_assetlist/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/edit_assign_assetlist/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -344,7 +344,7 @@ const EditAsset = ({ route, navigation }) => {
                 setRemarksErr('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_assign_asset';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_assign_asset';
 
             const response = await axios.put(apiUrl, {
                 id: SpecId.id,

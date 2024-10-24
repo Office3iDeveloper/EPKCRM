@@ -56,7 +56,7 @@ const ProformaInvoiceList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/getbuybowpackproformainvoicelist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/getbuybowpackproformainvoicelist';
             const response = await axios.get(apiUrl,
                 {
                     headers: {

@@ -52,7 +52,7 @@ const DepartmentList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_department';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_department';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -90,7 +90,7 @@ const DepartmentList = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -165,7 +165,7 @@ const DepartmentList = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_department';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_department';
 
             const response = await axios.post(apiUrl, {
                 depart_name: dep,
@@ -248,7 +248,7 @@ const DepartmentList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_department`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_department`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,

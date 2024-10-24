@@ -52,7 +52,7 @@ const TLLeaveRequest = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/tl_leaverequest_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/tl_leaverequest_list';
             const response = await axios.post(apiUrl, {
                 supervisor_empid: data.userempid,
                 role_id: data.userrole,
@@ -187,7 +187,7 @@ const TLLeaveRequest = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/tl_approval_leave_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/tl_approval_leave_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,
@@ -218,7 +218,7 @@ const TLLeaveRequest = () => {
     const HandleCancel = async (item) => {
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/tl_approval_leave_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/tl_approval_leave_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,

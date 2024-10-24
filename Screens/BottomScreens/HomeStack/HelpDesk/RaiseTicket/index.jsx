@@ -78,7 +78,7 @@ const RaiseTicket = ({ navigation }) => {
 
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -132,7 +132,7 @@ const RaiseTicket = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -153,7 +153,7 @@ const RaiseTicket = ({ navigation }) => {
 
     const fetchEmployeeDropdown1 = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -193,7 +193,7 @@ const RaiseTicket = ({ navigation }) => {
         const TickId = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/ticket_id';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/ticket_id';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -223,7 +223,7 @@ const RaiseTicket = ({ navigation }) => {
         const issType = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/issue_type_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/issue_type_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -350,7 +350,7 @@ const RaiseTicket = ({ navigation }) => {
             }
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/manual_raiseticket', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/manual_raiseticket', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

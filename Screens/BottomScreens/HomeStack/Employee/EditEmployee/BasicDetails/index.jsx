@@ -134,7 +134,7 @@ const BasicDetails = ({ onEmpDetails, selectedImage, setSelectedImage, employee,
                             <TouchableOpacity onPress={() => del()} style={styles.deleteButton}>
                                 <DeleteIcon width={15} height={15} color={"red"} />
                             </TouchableOpacity>
-                            <Image source={{ uri: `https://office3i.com/development/api/storage/app/${employee.profile_img}` }} style={styles.image} />
+                            <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${employee.profile_img}` }} style={styles.image} />
                         </View> : ""
                     ) : (
                         selectedImage.map((image, index) => (
@@ -162,7 +162,7 @@ const BasicDetails = ({ onEmpDetails, selectedImage, setSelectedImage, employee,
         const fetchData = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/employee_uid';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/employee_uid';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`

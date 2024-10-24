@@ -37,7 +37,7 @@ const HeaderandFooter = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/headerFooter_templatelist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/headerFooter_templatelist';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -107,7 +107,7 @@ const HeaderandFooter = ({ navigation }) => {
             }
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/add_header_footer', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/add_header_footer', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

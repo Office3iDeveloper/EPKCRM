@@ -93,7 +93,7 @@ const EditEvent = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -142,7 +142,7 @@ const EditEvent = ({ navigation, route }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -275,7 +275,7 @@ const EditEvent = ({ navigation, route }) => {
                     {showInitialImage ? (
                         datalist.e_image ? (
                             <View style={styles.imageContainer}>
-                                <Image source={{ uri: `https://office3i.com/development/api/storage/app/${datalist.e_image}` }} style={styles.image} />
+                                <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${datalist.e_image}` }} style={styles.image} />
                             </View>
                         ) : null
                     ) : (
@@ -317,7 +317,7 @@ const EditEvent = ({ navigation, route }) => {
         const GetData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/view_editevent/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/view_editevent/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -454,7 +454,7 @@ const EditEvent = ({ navigation, route }) => {
                 formData.append('e_image', datalist.e_image);
             }
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_event', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_event', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

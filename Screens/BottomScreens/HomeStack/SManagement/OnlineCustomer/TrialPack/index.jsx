@@ -55,7 +55,7 @@ const OCTrialPackList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/getonline_trialpacklist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/getonline_trialpacklist';
             const response = await axios.get(apiUrl,
                 {
                     headers: {
@@ -218,7 +218,7 @@ const OCTrialPackList = ({ navigation }) => {
     // const StatusApi = async () => {
 
     //     try {
-    //         const apiUrl = `https://office3i.com/development/api/public/api/meeting_status_list/1/${status}`;
+    //         const apiUrl = `https://epkgroup.in/crm/api/public/api/meeting_status_list/1/${status}`;
     //         const response = await axios.get(apiUrl, {
     //             headers: {
     //                 Authorization: `Bearer ${data.token}`

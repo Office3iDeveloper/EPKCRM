@@ -51,7 +51,7 @@ const PermissionRequest = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/hr_permission_approvallist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/hr_permission_approvallist';
             const response = await axios.post(apiUrl, {
                 emp_id: data.userempid,
                 user_roleid: data.userrole,
@@ -190,7 +190,7 @@ const PermissionRequest = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_permission_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_permission_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,
@@ -223,7 +223,7 @@ const PermissionRequest = () => {
     const HandleCancel = async (item) => {
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_permission_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_permission_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,

@@ -117,7 +117,7 @@ const EditEmployeeShift = ({ navigation, route }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -164,7 +164,7 @@ const EditEmployeeShift = ({ navigation, route }) => {
                 setWeekoffError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_employeeshift';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_employeeshift';
 
             const response = await axios.put(apiUrl, {
                 id: selectedID,
@@ -207,7 +207,7 @@ const EditEmployeeShift = ({ navigation, route }) => {
         const fetchData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/editview_employeeshift/${Id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_employeeshift/${Id}`;
 
                 const response = await axios.get(apiUrl, {
                     headers: {

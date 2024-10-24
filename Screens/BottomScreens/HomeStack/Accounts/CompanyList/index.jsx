@@ -60,7 +60,7 @@ const CompanyList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_company_information';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_company_information';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -226,7 +226,7 @@ const CompanyList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_company_information`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_company_information`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,

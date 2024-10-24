@@ -51,7 +51,7 @@ const OdCount = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/viewemp_Details/ON';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/viewemp_Details/ON';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

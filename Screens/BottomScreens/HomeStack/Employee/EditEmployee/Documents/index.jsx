@@ -69,7 +69,7 @@ const Documents = ({
         try {
             setLoading(true);
             const response = await axios.get(
-                `https://office3i.com/development/api/public/api/employee_detailslitshow/${id}`,
+                `https://epkgroup.in/crm/api/public/api/employee_detailslitshow/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -97,7 +97,7 @@ const Documents = ({
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/employee_document_typelist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/employee_document_typelist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -210,7 +210,7 @@ const Documents = ({
 
         try {
 
-            const response = await fetch('https://office3i.com/development/api/public/api/add_document_list', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/add_document_list', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -284,7 +284,7 @@ const Documents = ({
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/employee_single_docmentdelete`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_single_docmentdelete`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -617,7 +617,7 @@ const Documents = ({
 
         try {
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_employeemobile_details', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_employeemobile_details', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -783,7 +783,7 @@ const Documents = ({
 
             formData.append('old_document_path', EditedocFile);
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_employee_document', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_employee_document', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

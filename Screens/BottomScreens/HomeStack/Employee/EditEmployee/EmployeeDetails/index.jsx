@@ -42,7 +42,7 @@ const EmployeeDetails = ({ onEmpRole, onprevBasicDetails, setEmployee, employee 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/employee_categorylist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/employee_categorylist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -78,7 +78,7 @@ const EmployeeDetails = ({ onEmpRole, onprevBasicDetails, setEmployee, employee 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/getjobtype';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/getjobtype';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`

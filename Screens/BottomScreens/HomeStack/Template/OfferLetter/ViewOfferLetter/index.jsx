@@ -25,7 +25,7 @@ const ViewOfferLetter = ({ route, navigation }) => {
     const getApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/edit_offer_list/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/edit_offer_list/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -236,8 +236,8 @@ const ViewOfferLetter = ({ route, navigation }) => {
         });
     };
 
-    const Header = `https://office3i.com/development/api/storage/app/${invoiceData.header_attachment}`;
-    const Footer = `https://office3i.com/development/api/storage/app/${invoiceData.footer_attached}`;
+    const Header = `https://epkgroup.in/crm/api/storage/app/${invoiceData.header_attachment}`;
+    const Footer = `https://epkgroup.in/crm/api/storage/app/${invoiceData.footer_attached}`;
 
     return (
 

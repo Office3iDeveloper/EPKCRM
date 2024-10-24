@@ -30,7 +30,7 @@ const AddLeavePermissionHalfDay = ({ navigation }) => {
     const [selectedDepartmentsErr, setSelectedDepartmentsErr] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -75,7 +75,7 @@ const AddLeavePermissionHalfDay = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -109,7 +109,7 @@ const AddLeavePermissionHalfDay = ({ navigation }) => {
     const [selectedTypeErr, setSelectedTypeErr] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_type_list';
 
         const fetchData = async () => {
 
@@ -151,7 +151,7 @@ const AddLeavePermissionHalfDay = ({ navigation }) => {
     console.log(selectedCategory, "selectedCategory")
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_category_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_category_list';
 
         const fetchData = async () => {
 
@@ -289,7 +289,7 @@ const AddLeavePermissionHalfDay = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/shift_slot_checking`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/shift_slot_checking`;
 
             const response = await axios.post(apiUrl, {
                 emp_id: selectedMemberId,
@@ -469,7 +469,7 @@ const AddLeavePermissionHalfDay = ({ navigation }) => {
             }
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/add_menualentry', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/add_menualentry', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

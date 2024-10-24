@@ -55,7 +55,7 @@ const TrialPackList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/gettrial_packlist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/gettrial_packlist';
             const response = await axios.post(apiUrl, {
                 e_id: data.userempid,
                 role_id: data.userrole
@@ -227,7 +227,7 @@ const TrialPackList = ({ navigation }) => {
     // const StatusApi = async () => {
 
     //     try {
-    //         const apiUrl = `https://office3i.com/development/api/public/api/meeting_status_list/1/${status}`;
+    //         const apiUrl = `https://epkgroup.in/crm/api/public/api/meeting_status_list/1/${status}`;
     //         const response = await axios.get(apiUrl, {
     //             headers: {
     //                 Authorization: `Bearer ${data.token}`

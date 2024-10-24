@@ -25,7 +25,7 @@ const ViewLead = ({ route }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/viewedit_leadlist/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/viewedit_leadlist/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -49,7 +49,7 @@ const ViewLead = ({ route }) => {
     // 
 
     const handlePreview = (UrlLink) => {
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
         if (filePath && filePath !== "-") {

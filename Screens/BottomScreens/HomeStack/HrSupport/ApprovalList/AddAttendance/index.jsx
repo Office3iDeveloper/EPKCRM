@@ -32,7 +32,7 @@ const AddAttendance = ({ navigation }) => {
 
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -77,7 +77,7 @@ const AddAttendance = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -112,7 +112,7 @@ const AddAttendance = ({ navigation }) => {
 
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/attendance_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendance_type_list';
 
         const fetchData = async () => {
 
@@ -153,7 +153,7 @@ const AddAttendance = ({ navigation }) => {
     const [selectedLocationErr, setSelectedLocationErr] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/attendance_location_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendance_location_list';
 
         const fetchData = async () => {
 
@@ -253,7 +253,7 @@ const AddAttendance = ({ navigation }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -359,7 +359,7 @@ const AddAttendance = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_attendancemenualentry';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_attendancemenualentry';
 
             const response = await axios.post(apiUrl, {
                 emp_id: String(selectedMemberId),

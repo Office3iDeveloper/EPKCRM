@@ -52,7 +52,7 @@ const TLHalfDayRequest = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/tl_halfdayrequest_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/tl_halfdayrequest_list';
             const response = await axios.post(apiUrl, {
                 supervisor_empid: data.userempid,
                 role_id: data.userrole,
@@ -189,7 +189,7 @@ const TLHalfDayRequest = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/tl_approval_halfday_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/tl_approval_halfday_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,
@@ -221,7 +221,7 @@ const TLHalfDayRequest = () => {
     const HandleCancel = async (item) => {
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/tl_approval_halfday_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/tl_approval_halfday_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,

@@ -58,7 +58,7 @@ const TicketList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_raiseticket_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_raiseticket_list';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 emp_id: data.userempid,
@@ -230,7 +230,7 @@ const TicketList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_raiseticket`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_raiseticket`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -266,7 +266,7 @@ const TicketList = ({ navigation }) => {
 
     const handlePreview = (UrlLink) => {
 
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
 

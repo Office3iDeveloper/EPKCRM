@@ -187,7 +187,8 @@ const styles = StyleSheet.create({
     },
 
     buttonSubmit: {
-        backgroundColor: "#1772FF",
+        backgroundColor: "#ed1c26",
+        // backgroundColor: "#1772FF",
         width: 94,
         height: 31,
         alignItems: 'center',
@@ -212,7 +213,8 @@ const styles = StyleSheet.create({
     },
 
     EmployeeModeBoardbuttonCancelText: {
-        color: '#1772FF',
+        color: '#e5707bd1',
+        // color: '#1772FF',
         fontWeight: '400',
         fontSize: 14,
         lineHeight: 16.94,
@@ -297,7 +299,8 @@ const styles = StyleSheet.create({
     },
 
     addbutton: {
-        borderColor: '#0A60F1',
+        borderColor: '#ed1c26',
+        // borderColor: '#0A60F1',
         borderWidth: 2,
         borderRadius: 5,
         width: 72,

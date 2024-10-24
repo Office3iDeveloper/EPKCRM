@@ -87,7 +87,7 @@ const PreLeadList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_leadlist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_leadlist';
             const response = await axios.post(apiUrl, {
                 e_id: data.userempid,
                 role_id: data.userrole

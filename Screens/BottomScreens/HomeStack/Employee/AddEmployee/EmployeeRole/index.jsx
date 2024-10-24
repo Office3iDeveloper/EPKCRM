@@ -36,7 +36,7 @@ const EmployeeRole = ({ onBankDetails, onprevEmpDetails, validation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -78,7 +78,7 @@ const EmployeeRole = ({ onBankDetails, onprevEmpDetails, validation }) => {
  
      useEffect(() => {
  
-         const apiUrl = 'https://office3i.com/development/api/public/api/supervisor_userrole';
+         const apiUrl = 'https://epkgroup.in/crm/api/public/api/supervisor_userrole';
  
          const fetchData = async () => {
  
@@ -122,7 +122,7 @@ const EmployeeRole = ({ onBankDetails, onprevEmpDetails, validation }) => {
 
     const fetchSupervisorDropdown = async (index) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/supervisor_list/${index}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/supervisor_list/${index}`;
 
         try {
 

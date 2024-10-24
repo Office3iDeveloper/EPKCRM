@@ -26,7 +26,7 @@ const EditResume = ({ route, navigation }) => {
             try {
                 setLoading(true);
                 const response = await axios.get(
-                    `https://office3i.com/development/api/public/api/resume_edit_list/${id}`,
+                    `https://epkgroup.in/crm/api/public/api/resume_edit_list/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${data.token}`
@@ -269,7 +269,7 @@ const EditResume = ({ route, navigation }) => {
 
         try {
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_hr_resume', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_hr_resume', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

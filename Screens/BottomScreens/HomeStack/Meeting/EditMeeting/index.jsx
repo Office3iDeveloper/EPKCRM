@@ -62,7 +62,7 @@ const Editmeeting = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -110,7 +110,7 @@ const Editmeeting = ({ navigation, route }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -203,7 +203,7 @@ const Editmeeting = ({ navigation, route }) => {
         const GetData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/view_editmeeting/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/view_editmeeting/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -309,7 +309,7 @@ const Editmeeting = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_meeting';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_meeting';
 
             const response = await axios.put(apiUrl, {
                 id: SpecId.id,

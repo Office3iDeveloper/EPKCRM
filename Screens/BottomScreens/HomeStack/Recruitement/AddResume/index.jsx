@@ -219,7 +219,7 @@ const AddResume = ({ route, navigation }) => {
 
         try {
 
-            const response = await fetch('https://office3i.com/development/api/public/api/addhr_resume_upload', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/addhr_resume_upload', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

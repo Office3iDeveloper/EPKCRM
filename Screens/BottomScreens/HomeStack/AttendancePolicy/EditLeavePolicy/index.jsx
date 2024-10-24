@@ -84,7 +84,7 @@ const EditLeavePolicy = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_type_list';
 
         const fetchData = async () => {
 
@@ -142,7 +142,7 @@ const EditLeavePolicy = ({ navigation, route }) => {
                 setMonthlycountError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_leavepolicy';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_leavepolicy';
 
             const response = await axios.put(apiUrl, {
                 id: selectedID,
@@ -185,7 +185,7 @@ const EditLeavePolicy = ({ navigation, route }) => {
         const fetchData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/editview_leavepolicy/${Id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_leavepolicy/${Id}`;
 
                 const response = await axios.get(apiUrl, {
                     headers: {

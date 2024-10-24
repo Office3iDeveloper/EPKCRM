@@ -74,7 +74,7 @@ const EditEmployee = ({ route, navigation }) => {
             try {
                 setLoading(true);
                 const response = await axios.get(
-                    `https://office3i.com/development/api/public/api/employee_detailslitshow/${id}`,
+                    `https://epkgroup.in/crm/api/public/api/employee_detailslitshow/${id}`,
                     {
                         headers: {
                             Authorization: `Bearer ${data.token}`

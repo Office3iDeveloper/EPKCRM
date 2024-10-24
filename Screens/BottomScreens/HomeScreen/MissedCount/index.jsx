@@ -50,7 +50,7 @@ const MissedCount = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/missedcount_Details';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/missedcount_Details';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

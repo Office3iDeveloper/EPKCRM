@@ -158,7 +158,7 @@ const AddEmployeeShift = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_employeeshift';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_employeeshift';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -189,7 +189,7 @@ const AddEmployeeShift = ({ navigation }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -245,7 +245,7 @@ const AddEmployeeShift = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_employeeshift`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_employeeshift`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -282,7 +282,7 @@ const AddEmployeeShift = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -311,7 +311,7 @@ const AddEmployeeShift = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -431,7 +431,7 @@ const AddEmployeeShift = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/employeeshiftinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/employeeshiftinsert';
 
             const response = await axios.post(apiUrl, {
                 department_id: selectedDepartmentIdsAsNumbers,

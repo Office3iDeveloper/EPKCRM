@@ -51,7 +51,7 @@ const PermissionCount = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/viewemp_Details/PR';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/viewemp_Details/PR';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

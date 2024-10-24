@@ -120,7 +120,7 @@ const DailyAcc = ({ navigation }) => {
 
     const fetchBalanceCash = async () => {
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/balance_cash';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/balance_cash';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -143,7 +143,7 @@ const DailyAcc = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_dailyaccounts';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_dailyaccounts';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -388,7 +388,7 @@ const DailyAcc = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_dailyaccounts';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_dailyaccounts';
 
             const response = await axios.post(apiUrl, {
                 a_date: formattedStartDate,

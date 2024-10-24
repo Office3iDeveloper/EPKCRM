@@ -90,7 +90,7 @@ const LeaveType = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/leavetypeinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/leavetypeinsert';
 
             const response = await axios.post(apiUrl, {
                 request_type_name: shiftSlot,
@@ -137,7 +137,7 @@ const LeaveType = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_leavetype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_leavetype';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -186,7 +186,7 @@ const LeaveType = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_leavetype`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_leavetype`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -259,7 +259,7 @@ const LeaveType = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_leavetype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_leavetype';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

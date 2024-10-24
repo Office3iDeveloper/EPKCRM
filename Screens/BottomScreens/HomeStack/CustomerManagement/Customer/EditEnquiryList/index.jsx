@@ -41,7 +41,7 @@ const EditCustomerEnquiry = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/contact_Enquiry_StatusList';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/contact_Enquiry_StatusList';
 
         const fetchData = async () => {
 
@@ -154,7 +154,7 @@ const EditCustomerEnquiry = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/contact_update_enquiry';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/contact_update_enquiry';
 
             const response = await axios.post(apiUrl, {
                 id: SpecId.id,

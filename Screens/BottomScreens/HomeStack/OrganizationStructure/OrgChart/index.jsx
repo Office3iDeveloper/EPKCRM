@@ -21,7 +21,7 @@
 //     const fetchData = async () => {
 
 //         try {
-//             const apiUrl = 'https://office3i.com/development/api/public/api/orgchart_list/0';
+//             const apiUrl = 'https://epkgroup.in/crm/api/public/api/orgchart_list/0';
 //             const response = await axios.get(apiUrl, {
 //                 headers: {
 //                     Authorization: `Bearer ${data.token}`
@@ -46,7 +46,7 @@
 //                 >
 //                     <View style={styles.ImgCard}>
 //                         {employee.profile_img ? (
-//                             <Image source={{ uri: `https://office3i.com/development/api/storage/app/${employee.profile_img}` }} style={styles.Img} />
+//                             <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${employee.profile_img}` }} style={styles.Img} />
 //                         ) : (
 //                             <EmployeeIcon width={22} height={22} color={'#000'} />
 //                         )}

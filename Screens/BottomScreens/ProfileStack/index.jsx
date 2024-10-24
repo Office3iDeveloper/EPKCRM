@@ -70,7 +70,7 @@ const ProfileStack = ({ route, navigation }) => {
         try {
             setLoading(true);
             const response = await axios.get(
-                `https://office3i.com/development/api/public/api/employee_detailslitshow/${data.userempid}`,
+                `https://epkgroup.in/crm/api/public/api/employee_detailslitshow/${data.userempid}`,
                 {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -104,7 +104,7 @@ const ProfileStack = ({ route, navigation }) => {
                         <>
                             {employee && employeeDoc && (
                                 <View style={styles.profileimage}>
-                                    {employee.profile_img != '' || null ? <Image source={{ uri: `https://office3i.com/development/api/storage/app/${employee.profile_img}` }} style={styles.imageStyle} />
+                                    {employee.profile_img != '' || null ? <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${employee.profile_img}` }} style={styles.imageStyle} />
                                         :
                                         <View style={styles.iconStyle}>
                                             <ProfileIcon width={80} height={80} color={'#0A60F1'} />

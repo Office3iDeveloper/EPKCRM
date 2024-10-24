@@ -25,7 +25,7 @@ const ProtectedRoute = ({ navigation, children }) => {
 
           try {
             // API call to validate session
-            const apiUrl = `https://office3i.com/development/api/public/api/auth_valid_checking`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/auth_valid_checking`;
             const response = await axios.post(apiUrl, {
               login_id: val.tokenId,
               token: slicedToken,

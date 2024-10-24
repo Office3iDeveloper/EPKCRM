@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     subContainer: {
-        backgroundColor: SubContainer,
+        backgroundColor: '#FBB5BB4D',
         width: "80%",
         alignItems: 'center',
         borderRadius: 20,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     submitButton: {
-        backgroundColor: "#1772FF",
+        backgroundColor: "#ed1c26",
         width: "50%",
         height: 45,
         alignItems: 'center',

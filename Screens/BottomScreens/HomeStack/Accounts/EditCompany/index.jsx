@@ -74,7 +74,7 @@ const EditCompany = ({ route, navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -120,7 +120,7 @@ const EditCompany = ({ route, navigation }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -164,7 +164,7 @@ const EditCompany = ({ route, navigation }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -337,7 +337,7 @@ const EditCompany = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_company_information';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_company_information';
 
             const response = await axios.put(apiUrl, {
                 id: SpecId,
@@ -422,7 +422,7 @@ const EditCompany = ({ route, navigation }) => {
     const GetData = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/editview_company_information/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_company_information/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

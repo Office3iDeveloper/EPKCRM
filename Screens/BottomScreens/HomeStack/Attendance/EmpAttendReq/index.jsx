@@ -33,7 +33,7 @@ const EmpAttendReq = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_type_list';
 
         const fetchData = async () => {
 
@@ -72,7 +72,7 @@ const EmpAttendReq = ({ navigation }) => {
     const [selectedCategoryId, setSelectedCategoryId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_category_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_category_list';
 
         const fetchData = async () => {
 
@@ -113,7 +113,7 @@ const EmpAttendReq = ({ navigation }) => {
     const [selectedLocationId, setSelectedLocationId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/attendance_location_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendance_location_list';
 
         const fetchData = async () => {
 
@@ -156,7 +156,7 @@ const EmpAttendReq = ({ navigation }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -248,7 +248,7 @@ const EmpAttendReq = ({ navigation }) => {
 
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/attendance_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendance_type_list';
 
         const fetchData = async () => {
 
@@ -359,7 +359,7 @@ const EmpAttendReq = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_employee_attendance_request';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_employee_attendance_request';
 
             const response = await axios.post(apiUrl, {
                 emp_id: data.userempid,

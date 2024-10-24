@@ -58,7 +58,7 @@ const CanStatus = ({ route, navigation }) => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`https://office3i.com/development/api/public/api/resume_status_list/${activeComponent}`, {
+            const response = await axios.get(`https://epkgroup.in/crm/api/public/api/resume_status_list/${activeComponent}`, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
                 }

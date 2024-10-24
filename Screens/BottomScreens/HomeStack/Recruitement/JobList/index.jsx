@@ -74,7 +74,7 @@ const JobList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/post_job_list/${selectedStatus}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/post_job_list/${selectedStatus}`;
             console.log(apiUrl, "apiUrl")
             const response = await axios.get(apiUrl, {
                 headers: {

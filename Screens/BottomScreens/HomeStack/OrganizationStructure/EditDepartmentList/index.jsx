@@ -59,7 +59,7 @@ const EditDepList = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -103,7 +103,7 @@ const EditDepList = ({ navigation, route }) => {
         const fetchData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/editview_department/${Id.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_department/${Id.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -145,7 +145,7 @@ const EditDepList = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_department';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_department';
 
             const response = await axios.put(apiUrl, {
                 id: Id.id,

@@ -55,7 +55,7 @@ const GeneratePayslip = ({ navigation }) => {
     const [selectedDepartmentsId, setSelectedDepartmentsId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -94,7 +94,7 @@ const GeneratePayslip = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -160,7 +160,7 @@ const GeneratePayslip = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/get_emp_yearmonth_details`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/get_emp_yearmonth_details`;
 
             const response = await axios.post(apiUrl, {
                 emp_id: selectedMemberId,
@@ -190,7 +190,7 @@ const GeneratePayslip = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/ot_emp_salary_details`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/ot_emp_salary_details`;
 
             const response = await axios.post(apiUrl, {
                 emp_id: selectedMemberId,
@@ -294,7 +294,7 @@ const GeneratePayslip = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_generate_payslip';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_generate_payslip';
 
             const response = await axios.post(apiUrl, {
                 e_id: selectedMemberId,

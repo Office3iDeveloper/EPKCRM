@@ -75,7 +75,7 @@ const AttendanceRequest = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/get_dailyAttendanceList';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/get_dailyAttendanceList';
             const response = await axios.post(apiUrl, {
                 roleid: data.userrole,
                 loginempid: data.userempid,
@@ -327,7 +327,7 @@ const AttendanceRequest = ({ navigation }) => {
                                             <View style={styles.profileview}>
                                                 <View style={styles.imageview}>
                                                     <Image
-                                                        source={{ uri: `https://office3i.com/development/api/storage/app/${item.user_img}` }}
+                                                        source={{ uri: `https://epkgroup.in/crm/api/storage/app/${item.user_img}` }}
                                                         style={styles.imageStyle}
                                                     />
                                                 </View>

@@ -56,7 +56,7 @@ const ProjectList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_project_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_project_list';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 emp_id: data.userempid,
@@ -233,7 +233,7 @@ const ProjectList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_project`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_project`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,

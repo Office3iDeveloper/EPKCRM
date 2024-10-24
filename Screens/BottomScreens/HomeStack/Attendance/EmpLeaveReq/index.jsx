@@ -37,7 +37,7 @@ const EmpLeaveReq = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_type_list';
 
         const fetchData = async () => {
 
@@ -79,7 +79,7 @@ const EmpLeaveReq = ({ navigation }) => {
     const filteredCategoryDropdown = CategoryDropdown.filter(item => item.leave_category_name !== "Absent");
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_category_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_category_list';
 
         const fetchData = async () => {
 
@@ -208,7 +208,7 @@ const EmpLeaveReq = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/shift_slot_checking`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/shift_slot_checking`;
 
             const response = await axios.post(apiUrl, {
                 emp_id: data.userempid,
@@ -417,7 +417,7 @@ const EmpLeaveReq = ({ navigation }) => {
             }
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/add_employee_leave_request', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/add_employee_leave_request', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

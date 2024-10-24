@@ -63,7 +63,7 @@ const EditSupervisorList = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -107,7 +107,7 @@ const EditSupervisorList = ({ navigation, route }) => {
         const fetchData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/editview_supervisor/${Id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_supervisor/${Id}`;
 
                 const response = await axios.get(apiUrl, {
                     headers: {
@@ -162,7 +162,7 @@ const EditSupervisorList = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_supervisor';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_supervisor';
 
             const response = await axios.put(apiUrl, {
                 id: selectedID,

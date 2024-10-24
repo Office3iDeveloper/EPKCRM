@@ -56,7 +56,7 @@ const OfferLetterList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/offer_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/offer_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

@@ -58,7 +58,7 @@ const AssetsList = ({ navigation }) => {
         setLoadData(true)
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/assign_assetlist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/assign_assetlist';
             const response = await axios.post(apiUrl, {
                 role_id: data.userrole,
                 emp_id: data.userempid,
@@ -238,7 +238,7 @@ const AssetsList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_assign_asset`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_assign_asset`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,

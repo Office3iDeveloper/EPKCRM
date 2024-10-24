@@ -34,7 +34,7 @@ const BuySalesInvoiceView = ({ route, navigation }) => {
     const getApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/getbuybowpacksalesviewlist/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/getbuybowpacksalesviewlist/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

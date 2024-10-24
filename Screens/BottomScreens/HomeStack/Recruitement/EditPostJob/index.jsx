@@ -28,7 +28,7 @@ const EditPostJob = ({ route, navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/post_job_editlist/${SpecId.id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/post_job_editlist/${SpecId.id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -167,7 +167,7 @@ const EditPostJob = ({ route, navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -207,7 +207,7 @@ const EditPostJob = ({ route, navigation }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -261,7 +261,7 @@ const EditPostJob = ({ route, navigation }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -499,7 +499,7 @@ const EditPostJob = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_post_job';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_post_job';
 
             const response = await axios.put(apiUrl, {
                 id: SpecId.id,

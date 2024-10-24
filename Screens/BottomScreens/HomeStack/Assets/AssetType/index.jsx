@@ -51,7 +51,7 @@ const AssetType = () => {
                 setShiftError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_asset_type';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_asset_type';
 
             const response = await axios.post(apiUrl, {
                 created_by: data.userempid,
@@ -94,7 +94,7 @@ const AssetType = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/asset_type_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/asset_type_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -144,7 +144,7 @@ const AssetType = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_asset_type`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_asset_type`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -210,7 +210,7 @@ const AssetType = () => {
                 setShiftError1('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_asset_type';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_asset_type';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,
@@ -251,7 +251,7 @@ const AssetType = () => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/asset_id';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/asset_id';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

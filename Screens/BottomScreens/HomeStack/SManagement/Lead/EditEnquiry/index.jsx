@@ -120,7 +120,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const Annlist = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/getbuybowpacksalesviewlist/${SpecId.id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/getbuybowpacksalesviewlist/${SpecId.id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -154,7 +154,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/webmodule_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/webmodule_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -189,7 +189,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CountApi1 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/webproduct_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/webproduct_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -224,7 +224,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CountApi2 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/payment_method_status';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/payment_method_status';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -282,7 +282,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CountApi3 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -310,7 +310,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CountApi4 = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/webproductmodule_list/${selectedDocument1Id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/webproductmodule_list/${selectedDocument1Id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -460,7 +460,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -504,7 +504,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -550,7 +550,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const [selectedDepartmentsErr, setSelectedDepartmentsErr] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -591,7 +591,7 @@ const EditEnquiry = ({ navigation, route }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -627,7 +627,7 @@ const EditEnquiry = ({ navigation, route }) => {
     const CountApi5 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/payment_type_status';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/payment_type_status';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -830,7 +830,7 @@ const EditEnquiry = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/office3i_enquiryadd_lead';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/office3i_enquiryadd_lead';
 
             const response = await axios.post(apiUrl, {
                 first_name: fName,

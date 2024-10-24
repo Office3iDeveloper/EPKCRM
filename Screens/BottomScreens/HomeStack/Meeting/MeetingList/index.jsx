@@ -60,7 +60,7 @@ const MeetingList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_meeting_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_meeting_list';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 emp_id: data.userempid,
@@ -239,7 +239,7 @@ const MeetingList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_meeting`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_meeting`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -322,7 +322,7 @@ const MeetingList = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_meeting`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_meeting`;
 
             const response = await axios.post(apiUrl, {
                 meeting_id: slotToDelete1,
@@ -364,7 +364,7 @@ const MeetingList = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_meeting`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_meeting`;
 
             const response = await axios.post(apiUrl, {
                 meeting_id: slotToDelete2,
@@ -431,7 +431,7 @@ const MeetingList = ({ navigation }) => {
     // const StatusApi = async () => {
 
     //     try {
-    //         const apiUrl = `https://office3i.com/development/api/public/api/meeting_status_list/1/${status}`;
+    //         const apiUrl = `https://epkgroup.in/crm/api/public/api/meeting_status_list/1/${status}`;
     //         const response = await axios.get(apiUrl, {
     //             headers: {
     //                 Authorization: `Bearer ${data.token}`

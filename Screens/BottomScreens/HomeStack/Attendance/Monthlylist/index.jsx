@@ -108,7 +108,7 @@ const MonthlyList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/get_allmonthlyAttendanceList';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/get_allmonthlyAttendanceList';
             const payload = {
                 roleid: data.userrole,
                 loginempid: data.userempid,
@@ -319,7 +319,7 @@ const MonthlyList = ({ navigation }) => {
     //     }
 
     //     try {
-    //         const response = await fetch('https://office3i.com/development/api/public/api/add_employee_leave_request', {
+    //         const response = await fetch('https://epkgroup.in/crm/api/public/api/add_employee_leave_request', {
     //             method: 'POST',
     //             headers: {
     //                 Accept: 'application/json',

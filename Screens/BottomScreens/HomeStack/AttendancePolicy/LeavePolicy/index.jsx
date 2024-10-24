@@ -108,7 +108,7 @@ const LeavePolicy = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_leavepolicy';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_leavepolicy';
 
             const response = await axios.get(apiUrl, {
                 headers: {
@@ -166,7 +166,7 @@ const LeavePolicy = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -201,7 +201,7 @@ const LeavePolicy = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/leave_type_list';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/leave_type_list';
 
         const fetchData = async () => {
 
@@ -253,7 +253,7 @@ const LeavePolicy = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -341,7 +341,7 @@ const LeavePolicy = ({ navigation }) => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/addleave_policy';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/addleave_policy';
 
             const response = await axios.post(apiUrl, {
                 start_date: formattedStartDate,
@@ -427,7 +427,7 @@ const LeavePolicy = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_leavepolicy`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_leavepolicy`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,

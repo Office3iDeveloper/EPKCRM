@@ -9,7 +9,7 @@ const Career = ({ datalist, loadData }) => {
     const datas = datalist[0];
 
     const handlePreview = (UrlLink) => {
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
         if (filePath && filePath !== "-") {

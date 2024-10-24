@@ -27,7 +27,7 @@ const EditPurchaseInvoice = ({ route, navigation }) => {
     const getApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/editview_purchaseinvoice/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_purchaseinvoice/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -178,7 +178,7 @@ const EditPurchaseInvoice = ({ route, navigation }) => {
     const DescriptionalApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_item_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_item_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -202,7 +202,7 @@ const EditPurchaseInvoice = ({ route, navigation }) => {
 
     const HsnApi = async (index, descriptionalGoodsId) => {
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/sales_hsn_sac/${descriptionalGoodsId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/sales_hsn_sac/${descriptionalGoodsId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -396,7 +396,7 @@ const EditPurchaseInvoice = ({ route, navigation }) => {
     const CompanyApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_company_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_company_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -592,7 +592,7 @@ const EditPurchaseInvoice = ({ route, navigation }) => {
             formData.append('updated_by', data.userrole);
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/updatepurchaseinvoice', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/updatepurchaseinvoice', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

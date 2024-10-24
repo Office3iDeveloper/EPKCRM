@@ -122,7 +122,7 @@
 // //     const fetchData = async () => {
 
 // //         try {
-// //             const apiUrl = `https://office3i.com/development/api/public/api/editview_role/${SpecId}`;
+// //             const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_role/${SpecId}`;
 
 // //             const response = await axios.get(apiUrl, {
 // //                 headers: {
@@ -179,7 +179,7 @@
 // //     }
 
 // //     try {
-// //         const apiUrl = 'https://office3i.com/development/api/public/api/update_role';
+// //         const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_role';
 // //         const response = await axios.put(apiUrl, {
 // //             id: selectedID,
 // //             role_name: roleName,
@@ -471,7 +471,7 @@
 //         const fetchData = async () => {
 
 //             try {
-//                 const apiUrl = `https://office3i.com/development/api/public/api/editview_role/${SpecId}`;
+//                 const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_role/${SpecId}`;
 
 //                 const response = await axios.get(apiUrl, {
 //                     headers: {
@@ -1352,7 +1352,7 @@
 //         }
 
 //         try {
-//             const apiUrl = 'https://office3i.com/development/api/public/api/update_role';
+//             const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_role';
 //             const response = await axios.put(apiUrl, {
 //                 id: selectedID,
 //                 role_name: roleName,

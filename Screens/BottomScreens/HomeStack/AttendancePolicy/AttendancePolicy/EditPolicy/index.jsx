@@ -28,7 +28,7 @@ const EditPolicy = ({ route, navigation }) => {
         const fetchData = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/editview_attendancepolicy/${SpecId}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_attendancepolicy/${SpecId}`;
 
                 const response = await axios.get(apiUrl, {
                     headers: {
@@ -313,7 +313,7 @@ const EditPolicy = ({ route, navigation }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -409,7 +409,7 @@ const EditPolicy = ({ route, navigation }) => {
                 setLateDeduction3Error('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_attendancepolicy';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_attendancepolicy';
 
             const response = await axios.put(apiUrl, {
                 id: selectedID,

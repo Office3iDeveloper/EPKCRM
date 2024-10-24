@@ -68,7 +68,7 @@ const GoodService = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_goodservice';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_goodservice';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -266,7 +266,7 @@ const GoodService = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_goodservice`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_goodservice`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -366,7 +366,7 @@ const GoodService = ({ navigation }) => {
                 setHsnEditErr('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_goodservice';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_goodservice';
 
             const response = await axios.put(apiUrl, {
                 id: id,
@@ -439,7 +439,7 @@ const GoodService = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/addgood_service';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/addgood_service';
 
             const response = await axios.post(apiUrl, {
                 good_service_name: gsn,

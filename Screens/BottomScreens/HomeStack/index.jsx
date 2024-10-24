@@ -195,6 +195,7 @@ import HeaderandFooter from "./Template/HeaderandFooter";
 import EditHeadFoot from "./Template/EditHeadFoot";
 import ViewHeaderFooter from "./Template/ViewHeadFoot";
 import EditDailyAttendance from "./Attendance/EditDailyAttendance";
+import BiAttendance from "./Attendance";
 
 
 const Stack = createNativeStackNavigator();
@@ -220,7 +221,7 @@ const HomeStack = () => {
     <Stack.Navigator
       screenOptions={({ navigation }) => ({
         headerStyle: {
-          backgroundColor: '#20DDFE',
+          backgroundColor: '#e5707bd1',
         },
         headerTitleStyle: { fontWeight: 'bold', color: '#fff', },
         headerTitleAlign: 'center',
@@ -297,6 +298,8 @@ const HomeStack = () => {
       <Stack.Screen name="Employee Leave Request" component={EmpLeaveReq} />
       <Stack.Screen name="Employee Attendance Request" component={EmpAttendReq} />
       <Stack.Screen name="Employee Overtime Request" component={EmpOvertimeReq} />
+
+      <Stack.Screen name="Power Bi Attendance" component={BiAttendance} />
 
       {/*  */}
 

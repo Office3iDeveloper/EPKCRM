@@ -18,7 +18,7 @@ const ViewDeatails = ({ route, navigation }) => {
         <ScrollView>
             <View style={[styles.employeeContainer]}>
                 <View style={styles.profileimage}>
-                    <Image source={{ uri: `https://office3i.com/development/api/storage/app/${SpecId.profile_img}` }} style={styles.imageStyle} />
+                    <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${SpecId.profile_img}` }} style={styles.imageStyle} />
                     <Text style={styles.name}>{SpecId.visitor_name}</Text>
                 </View>
                 <View style={styles.employeeCard}>

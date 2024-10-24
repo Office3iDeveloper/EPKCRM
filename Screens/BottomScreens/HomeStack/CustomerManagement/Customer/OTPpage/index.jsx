@@ -53,7 +53,7 @@ const OtpCustomer = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/office3i_singup_resentotp';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/office3i_singup_resentotp';
 
             const response = await axios.post(apiUrl, {
                 email_id: Specemail,
@@ -117,7 +117,7 @@ const OtpCustomer = ({ navigation, route }) => {
                 setOtpError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/office3i_singup_otpverification';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/office3i_singup_otpverification';
 
             const response = await axios.post(apiUrl, {
                 email_id: Specemail,

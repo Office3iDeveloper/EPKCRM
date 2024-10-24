@@ -63,7 +63,7 @@ const AddEvent = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -112,7 +112,7 @@ const AddEvent = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -393,7 +393,7 @@ const AddEvent = ({ navigation }) => {
                 formData.append('e_attachment', docFile);
             }
 
-            const response = await fetch('https://office3i.com/development/api/public/api/add_event', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/add_event', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

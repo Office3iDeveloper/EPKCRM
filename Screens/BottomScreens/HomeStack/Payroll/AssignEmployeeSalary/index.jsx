@@ -57,7 +57,7 @@ const AssignEmpSalary = ({ navigation }) => {
     const [selectedDepartmentsId, setSelectedDepartmentsId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -96,7 +96,7 @@ const AssignEmpSalary = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -328,7 +328,7 @@ const AssignEmpSalary = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_define_emp_salary';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_define_emp_salary';
 
             const response = await axios.post(apiUrl, {
                 dep_id: selectedDepartmentsId,

@@ -41,7 +41,7 @@ const PreEditEnquiry = ({ navigation, route }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/contact_Enquiry_StatusList';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/contact_Enquiry_StatusList';
 
         const fetchData = async () => {
 
@@ -84,7 +84,7 @@ const PreEditEnquiry = ({ navigation, route }) => {
     const CountApi1 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/webproduct_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/webproduct_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -204,7 +204,7 @@ const PreEditEnquiry = ({ navigation, route }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/contact_update_enquiry';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/contact_update_enquiry';
 
             const response = await axios.post(apiUrl, {
                 id: SpecId.id,

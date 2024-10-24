@@ -92,7 +92,7 @@ const AttendanceType = () => {
             }
 
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/attendancetypeinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendancetypeinsert';
 
             const response = await axios.post(apiUrl, {
                 request_type_name: shiftSlot,
@@ -139,7 +139,7 @@ const AttendanceType = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_attendancetype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_attendancetype';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -188,7 +188,7 @@ const AttendanceType = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_attendancetype`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_attendancetype`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -261,7 +261,7 @@ const AttendanceType = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_attendancetype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_attendancetype';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

@@ -52,7 +52,7 @@ const LeaveRequest = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/hr_leave_approvallist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/hr_leave_approvallist';
             const response = await axios.post(apiUrl, {
                 emp_id: data.userempid,
                 user_roleid: data.userrole,
@@ -187,7 +187,7 @@ const LeaveRequest = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_leave_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_leave_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,
@@ -218,7 +218,7 @@ const LeaveRequest = () => {
     const HandleCancel = async (item) => {
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_leave_request`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_leave_request`;
 
             const response = await axios.post(apiUrl, {
                 id: item.id,

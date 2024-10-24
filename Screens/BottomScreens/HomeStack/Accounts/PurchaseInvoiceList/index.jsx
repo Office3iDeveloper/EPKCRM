@@ -60,7 +60,7 @@ const PurchaseInvoiceList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_purchaseinvoice';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_purchaseinvoice';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -226,7 +226,7 @@ const PurchaseInvoiceList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_purchaseinvoice`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_purchaseinvoice`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,

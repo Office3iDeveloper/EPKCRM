@@ -47,7 +47,7 @@ const AddAsset = ({ navigation }) => {
     const [selectedDepartmentsErr, setSelectedDepartmentsErr] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -88,7 +88,7 @@ const AddAsset = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -197,7 +197,7 @@ const AddAsset = ({ navigation }) => {
         const Asstype = async () => {
 
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/asset_name';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/asset_name';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -315,7 +315,7 @@ const AddAsset = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_assign_asset';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_assign_asset';
 
             const response = await axios.post(apiUrl, {
                 department: selectedDepartmentsId,

@@ -101,7 +101,7 @@ const AddGeneral = ({
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/ug_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/ug_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -139,7 +139,7 @@ const AddGeneral = ({
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/pg_list';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/pg_list';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -187,7 +187,7 @@ const AddGeneral = ({
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -234,7 +234,7 @@ const AddGeneral = ({
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${Resume.countryid}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${Resume.countryid}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -271,7 +271,7 @@ const AddGeneral = ({
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${Resume.stateid}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${Resume.stateid}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -331,7 +331,7 @@ const AddGeneral = ({
     const PrefCityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/all_city_list`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/all_city_list`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

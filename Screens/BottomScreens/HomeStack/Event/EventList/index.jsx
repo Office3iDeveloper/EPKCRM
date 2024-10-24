@@ -60,7 +60,7 @@ const Eventlist = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_event_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_event_list';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 emp_id: data.userempid,
@@ -231,7 +231,7 @@ const Eventlist = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_event`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_event`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -309,7 +309,7 @@ const Eventlist = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_event`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_event`;
 
             const response = await axios.post(apiUrl, {
                 event_id: slotToDelete1,
@@ -350,7 +350,7 @@ const Eventlist = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/approval_event`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/approval_event`;
 
             const response = await axios.post(apiUrl, {
                 event_id: slotToDelete2,
@@ -385,7 +385,7 @@ const Eventlist = ({ navigation }) => {
 
     const handlePreview = (UrlLink) => {
 
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
 

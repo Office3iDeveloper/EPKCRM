@@ -66,7 +66,7 @@ const EditAssignEmpSalary = ({ route, navigation }) => {
         const Edit = async () => {
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/show_define_emp_salary/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/show_define_emp_salary/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -305,7 +305,7 @@ const EditAssignEmpSalary = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_define_emp_salarylist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_define_emp_salarylist';
 
             const response = await axios.post(apiUrl, {
                 id: SpecId.id,

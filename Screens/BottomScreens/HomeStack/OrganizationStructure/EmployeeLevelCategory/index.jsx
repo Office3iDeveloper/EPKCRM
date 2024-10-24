@@ -91,7 +91,7 @@ const LevelCategory = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/emplevelcategoryinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/emplevelcategoryinsert';
 
             const response = await axios.post(apiUrl, {
                 emplevel_name: shiftSlot,
@@ -138,7 +138,7 @@ const LevelCategory = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_emplevelcategory';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_emplevelcategory';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -187,7 +187,7 @@ const LevelCategory = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_emplevelcategory`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_emplevelcategory`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -261,7 +261,7 @@ const LevelCategory = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_emplevelcategory';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_emplevelcategory';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

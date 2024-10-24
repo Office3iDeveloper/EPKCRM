@@ -93,7 +93,7 @@ const DocumentType = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/empdoctypeinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/empdoctypeinsert';
 
             const response = await axios.post(apiUrl, {
                 document_name: shiftSlot,
@@ -140,7 +140,7 @@ const DocumentType = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_empdoctype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_empdoctype';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -190,7 +190,7 @@ const DocumentType = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_empdoctype`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_empdoctype`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -263,7 +263,7 @@ const DocumentType = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_empdoctype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_empdoctype';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

@@ -60,7 +60,7 @@ const AssignedTask = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_assigntask_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_assigntask_list';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 emp_id: data.userempid,
@@ -239,7 +239,7 @@ const AssignedTask = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_task`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_task`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -342,7 +342,7 @@ const AssignedTask = () => {
     const [selectedDepartmentsId, setSelectedDepartmentsId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -380,7 +380,7 @@ const AssignedTask = () => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -411,7 +411,7 @@ const AssignedTask = () => {
         setFiltLoad(true);
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/filter_tasklist`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/filter_tasklist`;
 
             // Construct the request payload
             const payload = {
@@ -459,7 +459,7 @@ const AssignedTask = () => {
     const [selectedDepartmentsId1, setSelectedDepartmentsId1] = useState('');
 
     useEffect(() => {
-        const apiUrl = `https://office3i.com/development/api/public/api/supervisor_department_list/${data.userrole}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/supervisor_department_list/${data.userrole}`;
 
         const fetchData = async () => {
 
@@ -497,7 +497,7 @@ const AssignedTask = () => {
 
     const fetchEmployeeDropdown1 = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -526,7 +526,7 @@ const AssignedTask = () => {
 
     const handlePreview = (UrlLink) => {
 
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
 

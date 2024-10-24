@@ -34,7 +34,7 @@ const EmployeeList = ({ navigation }) => {
     const fetchData = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`https://office3i.com/development/api/public/api/employee_litshow/${selectedStatus}`, {
+            const response = await axios.get(`https://epkgroup.in/crm/api/public/api/employee_litshow/${selectedStatus}`, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
                 }
@@ -149,7 +149,7 @@ const EmployeeList = ({ navigation }) => {
                                                 <View>
                                                     {employee.profile_img ? (
                                                         <Image
-                                                            source={{ uri: `https://office3i.com/development/api/storage/app/${employee.profile_img}` }}
+                                                            source={{ uri: `https://epkgroup.in/crm/api/storage/app/${employee.profile_img}` }}
                                                             style={styles.imageStyle}
 
                                                         />

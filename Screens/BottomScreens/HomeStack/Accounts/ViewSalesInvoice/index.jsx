@@ -26,7 +26,7 @@ const SalesInvoiceView = ({ route, navigation }) => {
     const getApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/pdfview_saleinvoice/${SpecId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/pdfview_saleinvoice/${SpecId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

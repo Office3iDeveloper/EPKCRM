@@ -291,7 +291,7 @@ const AttendancePolicy = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_attendancepolicy';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_attendancepolicy';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -317,7 +317,7 @@ const AttendancePolicy = ({ navigation }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotlist';
+                const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotlist';
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -373,7 +373,7 @@ const AttendancePolicy = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_attendancepolicy`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_attendancepolicy`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -565,7 +565,7 @@ const AttendancePolicy = ({ navigation }) => {
             }
 
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/attendancepolicyinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/attendancepolicyinsert';
 
             const response = await axios.post(apiUrl, {
                 shift_slot: selectedShiftId,

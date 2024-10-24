@@ -177,7 +177,7 @@ const EditRelievingLetter = ({ route, navigation }) => {
     const [selectedDepartmentsId, setSelectedDepartmentsId] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/headerFooter_templatelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/headerFooter_templatelist';
 
         const fetchData = async () => {
 
@@ -374,7 +374,7 @@ const EditRelievingLetter = ({ route, navigation }) => {
                 formData.append('footer_attached', EdocFile1);
             }
 
-            const response = await fetch('https://office3i.com/development/api/public/api/update_relieving_letter', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/update_relieving_letter', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

@@ -86,7 +86,7 @@ const AddCustomer = ({ navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/webmodule_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/webmodule_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -121,7 +121,7 @@ const AddCustomer = ({ navigation }) => {
     const CountApi1 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/webproduct_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/webproduct_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -156,7 +156,7 @@ const AddCustomer = ({ navigation }) => {
     const CountApi2 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/payment_method_status';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/payment_method_status';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -214,7 +214,7 @@ const AddCustomer = ({ navigation }) => {
     const CountApi3 = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/country_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/country_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -243,7 +243,7 @@ const AddCustomer = ({ navigation }) => {
     const CountApi4 = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/webproductmodule_list/${selectedDocument1Id}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/webproductmodule_list/${selectedDocument1Id}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -399,7 +399,7 @@ const AddCustomer = ({ navigation }) => {
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/state_list/${selectedCountryId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/state_list/${selectedCountryId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -443,7 +443,7 @@ const AddCustomer = ({ navigation }) => {
     const CityApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/city_list/${selectedStateId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/city_list/${selectedStateId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -489,7 +489,7 @@ const AddCustomer = ({ navigation }) => {
     const [selectedDepartmentsErr, setSelectedDepartmentsErr] = useState('');
 
     useEffect(() => {
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -530,7 +530,7 @@ const AddCustomer = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -758,7 +758,7 @@ const AddCustomer = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/office3i_add_lead';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/office3i_add_lead';
 
             const response = await axios.post(apiUrl, {
                 first_name: fName,

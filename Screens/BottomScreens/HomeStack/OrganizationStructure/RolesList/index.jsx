@@ -35,7 +35,7 @@ const RoleList = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_addrole';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_addrole';
 
             const response = await axios.get(apiUrl, {
                 headers: {
@@ -89,7 +89,7 @@ const RoleList = ({ navigation }) => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_role`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_role`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,

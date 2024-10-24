@@ -91,7 +91,7 @@ const OvertimeType = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/add_ot_requesttype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/add_ot_requesttype';
 
             const response = await axios.post(apiUrl, {
                 request_type_name: shiftSlot,
@@ -138,7 +138,7 @@ const OvertimeType = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_ot_requesttype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_ot_requesttype';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -187,7 +187,7 @@ const OvertimeType = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_ot_requesttype`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_ot_requesttype`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -260,7 +260,7 @@ const OvertimeType = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_ot_requesttype';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_ot_requesttype';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

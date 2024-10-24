@@ -97,7 +97,7 @@ const SalaryCalculation = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/salary_calculation';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/salary_calculation';
             const response = await axios.post(apiUrl, {
                 yearmonth: formattedStartDate
             }, {
@@ -117,7 +117,7 @@ const SalaryCalculation = () => {
     const fetch = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/graph_salary_calculation';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/graph_salary_calculation';
             const response = await axios.post(apiUrl, {
                 yearmonth: formattedStartDate
             }, {

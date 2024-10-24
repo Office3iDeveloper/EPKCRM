@@ -138,7 +138,7 @@ const EditProject = ({ route, navigation }) => {
             setDataload(true);
 
             try {
-                const apiUrl = `https://office3i.com/development/api/public/api/edit_projectlist/${SpecId.id}`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/edit_projectlist/${SpecId.id}`;
                 const response = await axios.get(apiUrl, {
                     headers: {
                         Authorization: `Bearer ${data.token}`
@@ -167,7 +167,7 @@ const EditProject = ({ route, navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -196,7 +196,7 @@ const EditProject = ({ route, navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -401,7 +401,7 @@ const EditProject = ({ route, navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_project';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_project';
 
             const response = await axios.put(apiUrl, {
                 id: SpecId.id,

@@ -52,7 +52,7 @@ const AssignEmpList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/get_define_emp_salarylist';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/get_define_emp_salarylist';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

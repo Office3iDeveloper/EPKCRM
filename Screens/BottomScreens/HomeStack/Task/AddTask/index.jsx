@@ -32,7 +32,7 @@ const AddTask = ({ navigation }) => {
 
     const fetchTask = async () => {
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/task_id';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/task_id';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data?.token}`
@@ -49,7 +49,7 @@ const AddTask = ({ navigation }) => {
 
     const fetchProList = async () => {
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/project_name_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/project_name_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data?.token}`
@@ -125,7 +125,7 @@ const AddTask = ({ navigation }) => {
 
     useEffect(() => {
 
-        const apiUrl = 'https://office3i.com/development/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
 
         const fetchData = async () => {
 
@@ -154,7 +154,7 @@ const AddTask = ({ navigation }) => {
 
     const fetchEmployeeDropdown = async (selectedDepartmentIdsAsNumbers) => {
 
-        const apiUrl = `https://office3i.com/development/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
+        const apiUrl = `https://epkgroup.in/crm/api/public/api/employee_dropdown_list/${selectedDepartmentIdsAsNumbers}`;
 
         try {
 
@@ -372,7 +372,7 @@ const AddTask = ({ navigation }) => {
                 formData.append('attachment', docFile);
             }
 
-            const response = await fetch('https://office3i.com/development/api/public/api/add_task', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/add_task', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

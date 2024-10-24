@@ -80,7 +80,7 @@ const AppNav = ({ navigation }) => {
 
     //     try {
 
-    //         const apiUrl = `https://office3i.com/development/api/public/api/auth_valid_checking`;
+    //         const apiUrl = `https://epkgroup.in/crm/api/public/api/auth_valid_checking`;
 
     //         const slicedToken = data.token.split('|')[1];
     //         console.log(slicedToken, "slice");
@@ -110,7 +110,7 @@ const AppNav = ({ navigation }) => {
 
     // const SessionApi = async () => {
     //     try {
-    //         const apiUrl = `https://office3i.com/development/api/public/api/auth_valid_checking`;
+    //         const apiUrl = `https://epkgroup.in/crm/api/public/api/auth_valid_checking`;
     //         const slicedToken = data.token.split('|')[1];
 
     //         const response = await axios.post(apiUrl, {

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { ActivityIndicator, Alert, Button, Image, ImageBackground, Modal, RefreshControl, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ActivityIndicator, Alert, Button, Image, ImageBackground, Modal, Platform, RefreshControl, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./style";
 import NetInfo from '@react-native-community/netinfo';
 import DeviceInfo from 'react-native-device-info';
@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/adminIndexTodayCount';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/adminIndexTodayCount';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -178,7 +178,7 @@ const HomeScreen = ({ navigation }) => {
 
     const MoodBoard = async () => {
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_moodboard';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_moodboard';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -198,7 +198,7 @@ const HomeScreen = ({ navigation }) => {
     const MoodboardPost = async () => {
         setMoodLoad(true);
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/addmoodboard';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/addmoodboard';
             const response = await axios.post(apiUrl, {
                 mood_name: selectedEmoji,
                 created_by: data.userempid
@@ -236,7 +236,7 @@ const HomeScreen = ({ navigation }) => {
 
     const EditMood = async () => {
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/editview_moodboard/${data.userempid}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/editview_moodboard/${data.userempid}`;
 
             const response = await axios.get(apiUrl, {
                 headers: {
@@ -275,43 +275,17 @@ const HomeScreen = ({ navigation }) => {
     };
 
     const checkAndRequestCameraPermission = async () => {
-        const cameraPermission =
-            Platform.OS === 'android' ? PERMISSIONS.ANDROID.CAMERA : PERMISSIONS.IOS.CAMERA;
-    
-        const status = await check(cameraPermission);
-        console.log('Camera permission status:', status); // Log the current status for debugging
-    
-        switch (status) {
-            case RESULTS.UNAVAILABLE:
-                console.log('Camera is not available on this device');
-                Alert.alert('Camera Unavailable', 'Your device does not support camera access.');
+        const status = await check(PERMISSIONS.ANDROID.CAMERA);
+
+        if (status !== 'granted') {
+            const result = await request(PERMISSIONS.ANDROID.CAMERA);
+            if (result !== 'granted') {
+                console.log('Camera permission is not granted');
                 return;
-            case RESULTS.DENIED:
-                // Request permission if it was previously denied
-                const result = await request(cameraPermission);
-                if (result !== RESULTS.GRANTED) {
-                    console.log('Camera permission request denied');
-                    Alert.alert('Permission Denied', 'Camera access is required to proceed.');
-                    return;
-                }
-                break;
-            case RESULTS.BLOCKED:
-                console.log('Camera permission is blocked');
-                Alert.alert(
-                    'Camera Permission Blocked',
-                    'Camera access is blocked. Please enable it in the app settings.',
-                    [
-                        { text: 'Open Settings', onPress: () => Linking.openSettings() },
-                        { text: 'Cancel', style: 'cancel' },
-                    ]
-                );
-                return;
-            case RESULTS.GRANTED:
-                // Permission is granted
-                break;
+            }
         }
-    
-        handleFromCamera(); // Proceed if permission is granted
+
+        handleFromCamera();
     };
 
     const handleImagePickerResult = async (result) => {
@@ -416,7 +390,7 @@ const HomeScreen = ({ navigation }) => {
             try {
 
                 // Fetch EPKipaddress using Laravel
-                const epkResponse = await axios.get('https://office3i.com/development/api/public/api/getpublicipAddresses', {
+                const epkResponse = await axios.get('https://epkgroup.in/crm/api/public/api/getpublicipAddresses', {
                     headers: {
                         Authorization: `Bearer ${data.token}`
                     }
@@ -443,6 +417,7 @@ const HomeScreen = ({ navigation }) => {
                 SetLoad(true);
 
                 const connectionInfo = await NetInfo.fetch();
+                // checkAndRequestCameraPermission();
 
                 if (useripaddress) {
                     // const ipAddress = connectionInfo.details.ipAddress;
@@ -454,7 +429,8 @@ const HomeScreen = ({ navigation }) => {
                         } else {
                             // handleFromGallery();
                             // handleFromCamera();
-                            checkAndRequestCameraPermission();
+                            Platform.OS === "android" ?
+                                checkAndRequestCameraPermission() : handleFromCamera();
                         }
                     } else {
                         // console.log("Error: IP Address not allowed");
@@ -499,7 +475,7 @@ const HomeScreen = ({ navigation }) => {
 
 
         try {
-            const response = await fetch('https://office3i.com/development/api/public/api/insertappcheckin', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/insertappcheckin', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -529,7 +505,7 @@ const HomeScreen = ({ navigation }) => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/insertcheckout`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/insertcheckout`;
 
             const response = await axios.post(apiUrl, {
                 checkinuserempid: data.userempid,
@@ -563,7 +539,7 @@ const HomeScreen = ({ navigation }) => {
 
         try {
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/employeeIndexinouttime';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/employeeIndexinouttime';
 
             const response = await axios.post(apiUrl, {
                 emp_id: data.userempid
@@ -580,6 +556,8 @@ const HomeScreen = ({ navigation }) => {
                 setLoggedInTime(updatedata.userempcheckintime);
                 setLoggedOutTime(updatedata.userempcheckouttime);
                 setTotalHours(updatedata.userempchecktotaltime);
+                // setUserAlreadyLoggedIn(updatedata.statuscurrentdate);
+                // await AsyncStorage.setItem('userAlreadyLoggedIn', updatedata.statuscurrentdate.toString());
                 await AsyncStorage.setItem('loggedInTime', updatedata.userempcheckintime);
                 await AsyncStorage.setItem('loggedOutTime', updatedata.userempcheckouttime);
                 await AsyncStorage.setItem('totalHours', updatedata.userempchecktotaltime);
@@ -633,7 +611,7 @@ const HomeScreen = ({ navigation }) => {
     const Annlist = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_announcement';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_announcement';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -709,7 +687,7 @@ const HomeScreen = ({ navigation }) => {
                 setAnnounceMentdesErr('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/addannouncement';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/addannouncement';
             const response = await axios.post(apiUrl, {
                 validdate: formattedStartDate,
                 title: AnnounceMentTitle,
@@ -804,7 +782,7 @@ const HomeScreen = ({ navigation }) => {
                                             >
                                                 <View
                                                     style={[styles.button,
-                                                    { backgroundColor: userAlreadyLoggedIn == 1 ? "#0A62F1" : "#19CDFE" }
+                                                    { backgroundColor: userAlreadyLoggedIn == 1 ? "#ed1c26" : "#e5707bd1" }
                                                     ]}>
 
                                                     <View style={{ alignItems: 'center' }}>
@@ -1116,7 +1094,7 @@ const HomeScreen = ({ navigation }) => {
                         <View>
                             {filteredData.slice(0, showAll ? transformedMoodboard.length : initialItemsToShow).map(item => (
                                 <View style={styles.EmoCheckList} key={item.key}>
-                                    <Image source={{ uri: `https://office3i.com/development/api/storage/app/${item.profileImg}` }} style={styles.profileImage} />
+                                    <Image source={{ uri: `https://epkgroup.in/crm/api/storage/app/${item.profileImg}` }} style={styles.profileImage} />
                                     <Text style={styles.MoodBoardText}>{item.name}</Text>
                                     {renderIcon(item.iconType)}
                                 </View>
@@ -1296,8 +1274,6 @@ const HomeScreen = ({ navigation }) => {
 
 
         </ScrollView>
-
-
 
     )
 }

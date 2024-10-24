@@ -91,7 +91,7 @@ const AddShiftSlot = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/shiftslotinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/shiftslotinsert';
 
             const response = await axios.post(apiUrl, {
                 shiftslot_name: shiftSlot,
@@ -138,7 +138,7 @@ const AddShiftSlot = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_shiftslot';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_shiftslot';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -188,7 +188,7 @@ const AddShiftSlot = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_shiftslot`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_shiftslot`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -261,7 +261,7 @@ const AddShiftSlot = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_shiftslot';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_shiftslot';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

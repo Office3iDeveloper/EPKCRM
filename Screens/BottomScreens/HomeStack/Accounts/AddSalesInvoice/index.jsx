@@ -140,7 +140,7 @@ const AddSalesInvoice = ({ navigation }) => {
     const DescriptionalApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_item_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_item_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -163,7 +163,7 @@ const AddSalesInvoice = ({ navigation }) => {
 
     const HsnApi = async (index, descriptionalGoodsId) => {
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/sales_hsn_sac/${descriptionalGoodsId}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/sales_hsn_sac/${descriptionalGoodsId}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -229,7 +229,7 @@ const AddSalesInvoice = ({ navigation }) => {
     const InvoiceNumberApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/autogeneratesaleinvoiceid';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/autogeneratesaleinvoiceid';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -341,7 +341,7 @@ const AddSalesInvoice = ({ navigation }) => {
     const CompanyApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/sales_company_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/sales_company_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -496,7 +496,7 @@ const AddSalesInvoice = ({ navigation }) => {
             formData.append('created_by', data.userrole);
 
 
-            const response = await fetch('https://office3i.com/development/api/public/api/addsaleinvoice', {
+            const response = await fetch('https://epkgroup.in/crm/api/public/api/addsaleinvoice', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

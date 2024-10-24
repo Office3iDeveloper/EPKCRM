@@ -91,7 +91,7 @@ const LeaveCategory = () => {
                 return;
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/leavecategoryinsert';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/leavecategoryinsert';
 
             const response = await axios.post(apiUrl, {
                 category_name: shiftSlot,
@@ -138,7 +138,7 @@ const LeaveCategory = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_leavecategory';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_leavecategory';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -187,7 +187,7 @@ const LeaveCategory = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_leavecategory`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_leavecategory`;
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
                     updated_by: data.userempid,
@@ -260,7 +260,7 @@ const LeaveCategory = () => {
                 setEditedstatusError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_leavecategory';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_leavecategory';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

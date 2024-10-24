@@ -55,7 +55,7 @@ const Announcement = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_announcement';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_announcement';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -221,7 +221,7 @@ const Announcement = () => {
                     setReason('');
                 }
 
-                const apiUrl = `https://office3i.com/development/api/public/api/delete_announcement`;
+                const apiUrl = `https://epkgroup.in/crm/api/public/api/delete_announcement`;
 
                 const response = await axios.post(apiUrl, {
                     id: slotToDelete,
@@ -315,7 +315,7 @@ const Announcement = () => {
                 setAnnounceMentdesErr('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/update_announcement';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/update_announcement';
 
             const response = await axios.put(apiUrl, {
                 id: selectedSlotId,

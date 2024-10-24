@@ -105,7 +105,7 @@ const EditCareer = ({
     const CountApi = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/industry_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/industry_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -150,7 +150,7 @@ const EditCareer = ({
     const FuncArea = async () => {
 
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/functional_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/functional_list';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -194,7 +194,7 @@ const EditCareer = ({
     const StateApi = async () => {
 
         try {
-            const apiUrl = `https://office3i.com/development/api/public/api/area_specialization_list/${val.functionality_area}`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/area_specialization_list/${val.functionality_area}`;
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`

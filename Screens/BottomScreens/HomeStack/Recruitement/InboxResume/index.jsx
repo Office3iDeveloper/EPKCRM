@@ -92,7 +92,7 @@ const InboxResume = () => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/career_inboxdetails';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/career_inboxdetails';
             const response = await axios.get(apiUrl, {
                 headers: {
                     Authorization: `Bearer ${data.token}`
@@ -116,7 +116,7 @@ const InboxResume = () => {
     // 
 
     const handlePreview = (UrlLink) => {
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
         if (filePath && filePath !== "-") {
@@ -149,7 +149,7 @@ const InboxResume = () => {
                 setReason('');
             }
 
-            const apiUrl = `https://office3i.com/development/api/public/api/single_delete`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/single_delete`;
 
             const response = await axios.post(apiUrl, {
                 id: slotToDelete,
@@ -258,7 +258,7 @@ const InboxResume = () => {
                 setReason1('');
             }
 
-            const apiUrl = `https://office3i.com/development/api/public/api/bulk_delete`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/bulk_delete`;
 
             const response = await axios.post(apiUrl, {
                 id: selectedIds.join(', '),
@@ -341,7 +341,7 @@ const InboxResume = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/read_countupdate`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/read_countupdate`;
 
             const response = await axios.post(apiUrl, {
                 id: id,
@@ -367,7 +367,7 @@ const InboxResume = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/bulk_read_countupdate`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/bulk_read_countupdate`;
 
             const response = await axios.post(apiUrl, {
                 id: selectedIds.join(', '),
@@ -394,7 +394,7 @@ const InboxResume = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/un_read_countupdate`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/un_read_countupdate`;
 
             const response = await axios.post(apiUrl, {
                 id: id,
@@ -420,7 +420,7 @@ const InboxResume = () => {
 
         try {
 
-            const apiUrl = `https://office3i.com/development/api/public/api/bulk_unread_countupdate`;
+            const apiUrl = `https://epkgroup.in/crm/api/public/api/bulk_unread_countupdate`;
 
             const response = await axios.post(apiUrl, {
                 id: selectedIds.join(', '),

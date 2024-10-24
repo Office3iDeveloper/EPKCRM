@@ -37,7 +37,7 @@ const ForgotPassword = ({ navigation }) => {
                 setEmployeeIdError('');
             }
 
-            const apiUrl = 'https://office3i.com/development/api/public/api/forgot_password';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/forgot_password';
 
             const response = await axios.post(apiUrl, {
                 email: email,

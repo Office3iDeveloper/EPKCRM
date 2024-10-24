@@ -55,7 +55,7 @@ const AssignedList = ({ navigation }) => {
     const fetchData = async () => {
         setLoadData(true)
         try {
-            const apiUrl = 'https://office3i.com/development/api/public/api/view_raiseassign_list';
+            const apiUrl = 'https://epkgroup.in/crm/api/public/api/view_raiseassign_list';
             const response = await axios.post(apiUrl, {
                 user_roleid: data.userrole,
                 assign_empid: data.userempid,
@@ -190,7 +190,7 @@ const AssignedList = ({ navigation }) => {
 
     const handlePreview = (UrlLink) => {
 
-        const baseUrl = 'https://office3i.com/development/api/storage/app/';
+        const baseUrl = 'https://epkgroup.in/crm/api/storage/app/';
         const filePath = UrlLink;
         const url = `${baseUrl}${filePath}`;
 
