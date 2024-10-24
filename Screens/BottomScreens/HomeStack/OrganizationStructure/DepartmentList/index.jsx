@@ -87,10 +87,13 @@ const DepartmentList = ({ navigation }) => {
     const [showSupervisorNameDropdown, setShowSupervisorNameDropdown] = useState(false);
     const [memError, setMemError] = useState('');
 
+    console.log(selectedName, "selectedName")
+    console.log(selectedNameId, "selectedNameId")
+
 
     useEffect(() => {
 
-        const apiUrl = 'https://epkgroup.in/crm/api/public/api/userrolelist';
+        const apiUrl = 'https://epkgroup.in/crm/api/public/api/department_list';
 
         const fetchData = async () => {
 
@@ -103,7 +106,7 @@ const DepartmentList = ({ navigation }) => {
 
                 const responseData = response.data.data;
 
-                setDepartmentNameDropdown(responseData);
+                // setDepartmentNameDropdown(responseData);
                 setSupervisorNameDropdown(responseData);
 
             } catch (error) {
@@ -122,7 +125,7 @@ const DepartmentList = ({ navigation }) => {
     };
 
     const handleSelectName = (name) => {
-        setSelectedName(name.role_name);
+        setSelectedName(name.depart_name);
         setSelectedNameId(name.id)
         setShowSupervisorNameDropdown(false);
     };
@@ -360,17 +363,17 @@ const DepartmentList = ({ navigation }) => {
                     {showSupervisorNameDropdown && (
                         <View style={styles.dropdown}>
                             {supervisorNameDropdown
-                                .filter(department => department.role_name !== selectedDepartment)
+                                .filter(department => department.depart_name !== selectedDepartment)
                                 .map((department, index) => (
                                     <TouchableOpacity
                                         key={index}
                                         style={[
                                             styles.dropdownOption,
-                                            selectedName === department.role_name && styles.selectedOption
+                                            selectedName === department.depart_name && styles.selectedOption
                                         ]}
                                         onPress={() => handleSelectName(department)}
                                     >
-                                        <Text style={styles.dropdownOptionText}>{department.role_name}</Text>
+                                        <Text style={styles.dropdownOptionText}>{department.depart_name}</Text>
                                     </TouchableOpacity>
                                 ))
                             }
@@ -450,8 +453,8 @@ const DepartmentList = ({ navigation }) => {
                                         Name</Text>
                                     <Text style={[styles.header, styles.cell, styles.EmployeeName]}>Supervisor
                                         Name</Text>
-                                        <Text style={[styles.header, styles.cell, styles.Status]}>Created By</Text>
-                                        <Text style={[styles.header, styles.cell, styles.Status]}>Updated By</Text>
+                                    <Text style={[styles.header, styles.cell, styles.Status]}>Created By</Text>
+                                    <Text style={[styles.header, styles.cell, styles.Status]}>Updated By</Text>
                                     <Text style={[styles.header, styles.cell, styles.Status]}>Status</Text>
                                     <Text style={[styles.header, styles.cell, styles.Action]}>Action</Text>
                                 </View>
